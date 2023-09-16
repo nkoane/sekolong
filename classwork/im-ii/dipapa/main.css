@@ -1,0 +1,52 @@
+body {
+    background-color: #ddd;
+    color: #333;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main form {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main form p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+main form p label {
+    font-weight: bold;
+}
+main form p select {
+    flex-grow: 1;
+    font-size: 1.25rem;
+}
+main form p input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+main form p:last-child label {
+    margin-left: auto;
+}
+
+main form p:last-child label input {
+    margin-left: 1rem;
+}

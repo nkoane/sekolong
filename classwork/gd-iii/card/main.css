@@ -1,0 +1,72 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    background-color: yellow;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    display: grid;
+}
+
+main div.card {
+    background-color: #f00;
+    width: 20%;
+    aspect-ratio: 1/1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+main div.card:hover {
+    transform: perspective(500px) translate3d(0, 0, 20px) rotateX(90deg);
+}
+
+main div.card span {
+    font-size: 12rem;
+    font-weight: bold;
+    color: #ff0;
+}
+.wrap {
+    position: relative;
+}
+.square {
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: blue;
+    position: absolute;
+    z-index: 10;
+}
+
+.circle {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    z-index: 9;
+    transform: translateX(100%) translateY(-100%);
+    animation: circle 2s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: translateX(100%) translateY(-100%);
+        z-index: 11;
+    }
+    50% {
+        background-color: orange;
+        transform: translateX(-100%) translateY(100%);
+    }
+    100% {
+        transform: translateX(100%) translateY(-100%);
+    }
+}

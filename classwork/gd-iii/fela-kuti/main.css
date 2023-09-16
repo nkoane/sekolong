@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+}
+
+main {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1re;
+    margin-top: 3rem;
+}
+
+main h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+    color: #000;
+    padding: 0.4rem;
+    margin-left: -0.8rem;
+    position: relative;
+}
+
+main h1 span {
+    background-color: #ddff00;
+    color: #000;
+    margin-right: 0.4rem;
+    display: inline-block;
+    position: relative;
+}
+
+main div.food-group {
+    margin: 1rem;
+    width: fit-content;
+}
+
+main div.food-group:last-child {
+    border-top: 0.2rem solid #000;
+}
+
+main div.food-group h2 {
+    margin: 0;
+}
+
+main div.food-group ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+main div.food-group ul li {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: 200px;
+}
+
+main div.food-group ul li h3 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+
+main div.food-group ul li:active {
+    background-color: red;
+}

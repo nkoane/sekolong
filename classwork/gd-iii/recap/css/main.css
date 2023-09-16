@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+ol.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    background-color: #0f0;
+    justify-content: space-between;
+    height: 200px;
+    flex-direction: column;
+}
+
+ol.nav li {
+    background-color: #aaa;
+}
+
+section {
+    display: grid;
+    background-color: #800080;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70vw;
+    margin: 0 auto;
+    background-image: url('../images/sunflower-vase.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section > p {
+    font-family: serif;
+}
+
+.red-white {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+}
+
+.blue-yellow {
+    background-color: rgba(0, 0, 255, 0.5);
+    color: rgb(255, 255, 0);
+    height: 100px;
+}
+
+.blue-yellow:hover {
+    animation: 3s ease-in 0s infinite bumb;
+    cursor: pointer;
+}
+
+@keyframes bumb {
+    0% {
+        background-color: rgba(0, 0, 255, 0.5);
+
+        height: 100px;
+    }
+
+    50% {
+        background-color: rgba(255, 0, 255, 1);
+        height: 300px;
+    }
+
+    100% {
+        background-color: rgba(0, 0, 255, 0.5);
+        height: 100px;
+    }
+}
+
+.boxed {
+    margin: 2rem;
+    padding: 2rem;
+    border: 2rem solid #fff;
+}

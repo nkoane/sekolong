@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    background-color: #f0d000;
+}
+
+main div {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+span.box {
+    border: 20px solid #fff;
+    display: block;
+    overflow: hidden;
+    width: 600px;
+    height: 280px;
+}
+
+span.box img {
+    display: inline-block;
+    width: 640px;
+    position: relative;
+}
+
+span.box section {
+    width: 2300px;
+    position: relative;
+    top: 0;
+    display: flex;
+    animation: slide 3s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -800px;
+    }
+
+    100% {
+        left: -1700px;
+    }
+}

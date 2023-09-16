@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="code.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="main.css" rel="stylesheet" />
+        <title>D:PAPA</title>
+    </head>
+    <body>
+        <main>
+            <form id="dijo">
+                <p>
+                    <label for="starch">STARCH</label>
+                    <select id="starch" name="starch">
+                        <option value="10">Papa</option>
+                        <option value="50">Ledombolo</option>
+                        <option value="40">Rice</option>
+                        <option value="15">Mash</option>
+                    </select>
+                    <input type="text" id="starch_cost" name="starch_cost" class="sub_total" value="0" />
+                </p>
+                <p>
+                    <label for="meat">D|NAMA</label>
+                    <select id="meat" name="meat"></select>
+                    <input type="text" id="meat_cost" name="meat_cost" class="sub_total" value="0" />
+                </p>
+                <p>
+                    <label>
+                        Total
+                        <input type="total" id="total" name="total" />
+                    </label>
+                </p>
+            </form>
+        </main>
+        <script defer type="module" src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="css/beauty.css" rel="stylesheet" />
+        <title>BEAU</title>
+    </head>
+    <body>
+        <main>
+            <h1 id="title"></h1>
+        </main>
+
+        <script>
+            let tar = document.getElementById('title');
+
+            document.addEventListener('click', (ev) => {
+                tar.style.setProperty('left', ev.clientX - 50 + 'px');
+                tar.style.setProperty('top', ev.clientY - 50 + 'px');
+            });
+        </script>
+    </body>
+</html>

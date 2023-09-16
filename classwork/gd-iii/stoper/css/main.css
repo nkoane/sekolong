@@ -1,0 +1,47 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    gap: 1rem;
+    font-size: 16rem;
+    font-weight: bold;
+}
+
+main div {
+    background-color: #ff0;
+    width: 2ch;
+    aspect-ratio: 1;
+    transition: 0.4s;
+}
+
+main nav {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main nav button {
+    background-color: #000;
+    color: #ff0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+
+main nav button:hover {
+    background-color: #ff0;
+    opacity: 0.8;
+    color: #000;
+}

@@ -1,0 +1,54 @@
+{
+    "name": "Black Label Draught Scout",
+    "description": "These are the places to find black label draught in johannesburg",
+    "pois": [
+        {
+            "name": "Xai Xai Lounge",
+            "description": "Xai Xai Lounge is a Mozambican restaurant and bar in Melville, Johannesburg. It is a popular hangout for students and young professionals.",
+            "coords": {
+                "latitude": "-26.175",
+                "longitude": "28.009"
+            }
+        },
+        {
+            "name": "Zoo Lake Bowling Club",
+            "description": "Zoo Lake Bowling Club is a lawn bowling club in Parkwood, Johannesburg. It is a popular hangout for students and young professionals.",
+            "coords": {
+                "latitude": "-26.166",
+                "longitude": "28.029"
+            }
+        },
+        {
+            "name": "Mike's Kitchen",
+            "description": "Mike's Kitchen is a restaurant in Parktown North, Johannesburg. It is a popular hangout for students and young professionals.",
+            "coords": {
+                "latitude": -26.18258760677983,
+                "longitude": 28.03554970404303
+            }
+        },
+        {
+            "name": "Pirates Sports Club",
+            "description": "Pirates Sports Club is a sports club in Greenside, Johannesburg. It is a popular hangout for students and young professionals.",
+            "coords": {
+                "latitude": -26.14519922162427,
+                "longitude": 28.015809011298558
+            }
+        },
+        {
+            "name": "Kitcheners",
+            "description": "Kitcheners is a bar in Braamfontein, Johannesburg. It is a popular hangout for students and young professionals.",
+            "coords": {
+                "latitude": "-26.192",
+                "longitude": "28.034"
+            }
+        },
+        {
+            "name": "Cracker Zak's",
+            "description": "Cracker Zak's is a bar at the The Zone, Rosebank that replaces the gaming place.",
+            "coords": {
+                "latitude": -26.14470685752846,
+                "longitude": 28.042649490080905
+            }
+        }
+    ]
+}

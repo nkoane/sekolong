@@ -1,0 +1,52 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #888;
+    margin: 0;
+}
+
+section {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section div.box {
+    background-color: #000;
+    width: calc(100% / 3);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    font-weight: 900;
+    font-size: 10rem;
+    box-shadow: 1px 1px 50px #ddd;
+    height: 100vh;
+}
+
+.box {
+    position: relative;
+    /*    animation: move 1s linear infinite; */
+}
+
+#minutes {
+    animation-duration: 60s;
+}
+
+#hours {
+    animation-duration: 3600s;
+}
+
+@keyframes move {
+    0% {
+        top: -400px;
+    }
+    100% {
+        top: 100vh;
+    }
+}

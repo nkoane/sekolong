@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url('../images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #fff;
+    height: 100vh;
+    background-color: #f00;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    width: 200px;
+    text-align: right;
+    overflow: hidden;
+}
+
+main .hand {
+    font-size: 10rem;
+    font-weight: 900;
+    display: block;
+    position: relative;
+    background-color: #f00;
+    transition: all 0.1s ease-in-out;
+}
+
+main .hand:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+main .blurred {
+    filter: blur(10rem);
+    animation: blurry 1s ease-in-out infinite;
+}
+
+@keyframes blurry {
+    0% {
+        left: 200px;
+        color: #f00;
+    }
+    50% {
+        filter: blur(0);
+        color: #fff;
+        left: 0;
+    }
+    100% {
+        left: 200px;
+        color: #f00;
+    }
+}
+
+@keyframes slide {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(800px - 2000px);
+    }
+}

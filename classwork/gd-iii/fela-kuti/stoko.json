@@ -1,0 +1,72 @@
+{
+    "starch": [
+        {
+            "name": "rice",
+            "description": "fluffy white basmati rice",
+            "picture": "https://picsum.photos/seed/rice/200/200",
+            "price": 8.0,
+            "weight": 100,
+            "available": true
+        },
+        {
+            "name": "papa",
+            "description": "papa ya se tswana",
+            "picture": "https://picsum.photos/seed/papa/200/200",
+            "price": 10.0,
+            "weight": 100,
+            "available": true
+        },
+        {
+            "name": "ledombolo",
+            "description": "ledombolo le le tshwanang le papa",
+            "picture": "https://picsum.photos/seed/ledombolo/200/200",
+            "price": 15.0,
+            "weight": 100,
+            "available": false
+        }
+    ],
+    "vegatables": [
+        {
+            "name": "spinach",
+            "description": "spinach",
+            "picture": "https://picsum.photos/seed/spinach/200/200",
+            "price": 10.0,
+            "weight": 100,
+            "available": true
+        },
+        {
+            "name": "cabbage",
+            "description": "cabbage",
+            "picture": "https://picsum.photos/seed/cabbage/200/200",
+            "price": 10.0,
+            "weight": 100,
+            "available": true
+        },
+        {
+            "name": "carrots",
+            "description": "carrots",
+            "picture": "https://picsum.photos/seed/carrots/200/200",
+            "price": 10.0,
+            "weight": 100,
+            "available": true
+        }
+    ],
+    "meats": [
+        {
+            "name": "chicken",
+            "description": "chicken thighs, marinated in honey and lemon",
+            "picture": "https://picsum.photos/seed/chicken/200/200",
+            "price": 40.0,
+            "weight": 150,
+            "available": true
+        },
+        {
+            "name": "beef",
+            "description": "beef stew",
+            "picture": "https://picsum.photos/seed/beef/200/200",
+            "price": 50.0,
+            "weight": 150,
+            "available": true
+        }
+    ]
+}

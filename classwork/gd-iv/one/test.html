@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .scroller {
+                height: 100vh;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+                background-color: blue;
+            }
+
+            .scroller section {
+                scroll-snap-align: start;
+                background-color: red;
+                height: 100vh;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <article class="scroller">
+            <section>
+                <h2>Section one</h2>
+            </section>
+            <section>
+                <h2>Section two</h2>
+            </section>
+            <section>
+                <h2>Section three</h2>
+            </section>
+        </article>
+    </body>
+</html>

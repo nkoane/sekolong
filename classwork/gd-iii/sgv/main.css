@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    background-color: #ddd;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1) rotate(-1deg);
+    color: #000;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+section main {
+    width: 30rem;
+    aspect-ratio: 1/1.5;
+    /*
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;*/
+}
+
+section main .title {
+    font-size: 2rem;
+    color: #999;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    border-bottom: 1px dotted #eee;
+    margin: 0 0 0.1rem 0;
+}
+
+section main .block {
+    background-color: #eee;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+section main .block p {
+    margin: 0;
+}
+
+section main .block p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+form {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+}
+
+form input {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+}
+
+ul.details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    gap: 1rem;
+}
+
+ul.details li {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    padding-top: 0.35rem;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+ul.details li svg {
+    color: #999;
+    transition: all 0.2s ease-in-out;
+}
+
+ul.details li:last-child svg {
+    border: 1px solid #999;
+    border-radius: 100%;
+    padding: 0.1rem;
+}

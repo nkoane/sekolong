@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="main.css" rel="stylesheet" />
+        <title>SGV:0.1</title>
+    </head>
+    <body>
+        <section id="app">
+            <main id="quest">
+                <h1 class="title"><a href="/">SGV</a></h1>
+                <div class="block">
+                    <p>
+                        <form id="question">
+                            <input type="text" name="city" placeholder="O jola kae?" id="city">
+                        </form>
+                    </p>
+                        <ul class="details">
+                            <li>
+                                <span class="temperature"></span>
+                                <svg  id="temperature" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thermometer"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+                            </li>
+                            <li>
+                                <span class="wind-speed"></span>
+                                <svg  id="wind-speed"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                            </li>
+                            <li>
+                                <span class="wind-direction"></span>
+                                <svg  id="wind-direction" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+
+                            </li>
+                        </ul>
+                </div>
+            </main>
+        </section>
+
+        <script defer type="module" src="main.js"></script>
+    </body>
+</html>

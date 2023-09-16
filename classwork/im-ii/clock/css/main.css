@@ -1,0 +1,52 @@
+body {
+    background-color: #afafff;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    /*justify-items: center;
+    align-items: center;*/
+    place-items: center;
+    height: 100vh;
+}
+
+#clock {
+    font-weight: bold;
+    display: flex;
+    font-size: 12rem;
+    overflow: hidden;
+}
+
+#clock div.minutes {
+    font-size: 6rem;
+    color: #f0f0ff;
+}
+
+#clock div.seconds {
+    font-size: 3rem;
+    color: #e9e9ff;
+    border-top: 1px solid #fff;
+}
+
+#clock div.seconds span {
+    animation: blink 2s linear infinite;
+    position: relative;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        top: -60px;
+    }
+
+    50% {
+        opacity: 1;
+        top: 40px;
+        color: #fff;
+    }
+
+    100% {
+        opacity: 0;
+        top: -60px;
+    }
+}

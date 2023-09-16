@@ -1,0 +1,12 @@
+{
+    "pois": [
+        {
+            "name": "XAI:XAI",
+            "description": "XAI:XAI is a trendy rooftop bar located in the heart of Johannesburg",
+            "coordinates": {
+                "latitude": -26.17728646208222,
+                "longitude": 28.008418256389177
+            }
+        }
+    ]
+}

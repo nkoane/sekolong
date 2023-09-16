@@ -1,0 +1,51 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+section.main {
+    width: 65%;
+    background-color: #aaa;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: url(/images/vase-sunflower.jpg);
+    background-size: contain;
+}
+
+h1 {
+    margin: 0;
+}
+p {
+    line-height: 2rem;
+    margin: 0;
+}
+
+section > p {
+    font-family: serif;
+}
+
+.red-black {
+    color: #000;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.yellow-black {
+    color: #000;
+    background-color: rgb(255, 255, 0);
+}
+
+.boxed {
+    padding: 1rem;
+    margin: 1rem;
+    border: 10px solid #fff;
+}
+
+section div {
+    background-color: #800080;
+    width: 50%;
+}

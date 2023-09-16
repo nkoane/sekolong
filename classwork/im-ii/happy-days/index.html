@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="beer.svg" type="image/x-icon" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="main.css" />
+        <title>HAPPY DAYS</title>
+    </head>
+    <body>
+        <main id="app">
+            <div id="map"></div>
+            <div id="console">
+                <div id="pois">pois</div>
+                <div id="info">info</div>
+            </div>
+        </main>
+        <script defer type="module" src="main.js"></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibHRkbiIsImEiOiJjbGoybWhydXIwZDRwM2RvMGZjZ2dwaWR2In0.vvl3SlGi0BD1DVcs2qYwqQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/light-v11',
+            });
+
+            /*
+                "latitude": -26.17728646208222,
+                "longitude": 28.008418256389177
+            */
+
+            map.on('load', function () {
+                map.setZoom(18);
+                navigator.geolocation.getCurrentPosition(success, failed);
+            });
+
+            function failed() {
+                console.log('failed, to locate you');
+            }
+
+            function success(position) {
+                const myPosition = position.coords;
+                map.setCenter([myPosition.longitude, myPosition.latitude]);
+
+                const myPositionMarker = new mapboxgl.Marker({
+                    color: '#00ff00',
+                })
+                    .setLngLat([myPosition.longitude, myPosition.latitude])
+                    .addTo(map);
+            }
+        </script>
+    </body>
+</html>

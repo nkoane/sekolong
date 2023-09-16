@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fff;
+}
+
+#app {
+    width: 80vw;
+    margin: 4rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+#map {
+    width: 100%;
+    background-color: #ccc;
+    height: 80vh;
+}
+
+#console {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#console > div {
+    background-color: hsl(281, 100%, 80%);
+    flex-shrink: 1;
+}
+#console #pois {
+    min-height: 30%;
+}
+
+#console #info {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+@media (max-width: 1000px) {
+    /* Your CSS rules here */
+    #app {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    #map {
+        margin-bottom: 1rem;
+    }
+}

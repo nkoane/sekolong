@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- set favicon -->
+        <link rel="icon" href="cloud-drizzle.svg" />
+        <title>DI:YO</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <main>
+            <h1><span>&</span>Bargain.</h1>
+            <div id="stoko" class="ping">LOADING &hellip;</div>
+        </main>
+        <script type="module" defer src="main.js"></script>
+    </body>
+    <style>
+        .ping {
+            font-weight: 700;
+            animation: ping 1s infinite;
+            background-color: black;
+        }
+
+        @keyframes ping {
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</html>

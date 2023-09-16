@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <title>MO' MONEY!</title>
+    </head>
+    <body>
+        <section id="app">
+            <header>
+                <h1>Mo' Money!</h1>
+            </header>
+            <main id="currency">
+                <form id="currency-form">
+                    <select id="selector">
+                        <option value="15" selected>&dollar;</option>
+                        <option value="25">&pound;</option>
+                        <option value="20">&euro;</option>
+                        <option value="0.1">Z&dollar;</option>
+                    </select>
+                    <input name="value" id="query" />
+                    <button id="convert">&equiv;</button>
+                    <input id="result" type="text" value="" readonly />
+                </form>
+            </main>
+        </section>
+        <script defer src="main.js"></script>
+    </body>
+</html>

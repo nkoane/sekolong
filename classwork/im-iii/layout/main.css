@@ -1,0 +1,34 @@
+body {
+    background-color: #fff;
+    margin: 0;
+}
+
+#app {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#app header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#app article {
+    height: 80%;
+}
+
+#app article #deets {
+    background-color: #d0d0d0;
+}
+
+#app article #pic img {
+    width: 100%;
+}
+
+#app footer {
+    height: 10%;
+    background-color: #aaa;
+}

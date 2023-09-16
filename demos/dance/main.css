@@ -1,0 +1,92 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+main#app {
+    width: 80vw;
+    height: 80vh;
+    margin: 4rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+#map {
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+#console {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#console > div {
+    padding: 1rem;
+}
+
+#pois {
+    background-color: #ffa500;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    min-height: 30%;
+}
+
+#info {
+    background-color: #fddb9c;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: all 2s ease;
+    height: 70%;
+    overflow: hidden;
+}
+
+#info ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 90%;
+    overflow: scroll;
+}
+
+#info ol li {
+    background-color: #fff;
+    margin-bottom: 0.125rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#info ol li:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+#info ol li:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    /* Your CSS rules for screens less than 600px */
+
+    main#app {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    #map {
+        height: 50vh;
+
+        margin-bottom: 1rem;
+    }
+
+    #console {
+        height: 40vh;
+    }
+}

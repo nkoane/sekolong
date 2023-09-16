@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    cursor: not-allowed;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main span {
+    display: block;
+    background-color: #fff;
+    color: red;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Video Background with Email Subscription Field</title>
+        <style>
+            /* Set the height to 100% for the body and html to enable the video to cover the entire screen */
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+            }
+
+            /* Set the video to be fixed and cover the entire screen */
+            #video-background {
+                background-color: #f00;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: -1;
+                aspect-ratio: 16 / 9;
+            }
+
+            /* Set the email subscription field to be centered and on top of the video */
+            #email-subscription {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+
+            /* Style the email subscription field */
+            #email-subscription input[type='email'] {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                width: 300px;
+            }
+
+            #email-subscription input[type='submit'] {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                background-color: #4caf50;
+                color: white;
+                cursor: pointer;
+            }
+
+            #email-subscription input[type='submit']:hover {
+                background-color: #3e8e41;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Set the video source and autoplay it -->
+        <video id="video-background" autoplay muted loop>
+            <source src="coi.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Create the email subscription field -->
+        <div id="email-subscription">
+            <form>
+                <input type="email" placeholder="Enter your email address" />
+                <input type="submit" value="Subscribe" />
+            </form>
+        </div>
+
+        <script defer>
+            document.addEventListener('keydown', function (event) {
+                if (event.code === 'Space') {
+                    // Spacebar key code
+                    event.preventDefault(); // Prevent default behavior of the spacebar
+
+                    var video = document.getElementById('video-background'); // Replace "video" with the actual ID of your video element
+
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+
+                if (event.keyCode === 77) {
+                    // "M" key code
+                    var video = document.getElementById('video-background'); // Replace "video" with the actual ID of your video element
+                    video.muted = !video.muted;
+                }
+            });
+        </script>
+    </body>
+</html>

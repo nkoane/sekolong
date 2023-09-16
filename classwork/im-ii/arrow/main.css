@@ -1,0 +1,47 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+main {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+main div {
+    aspect-ratio: 1;
+    color: #000;
+    transform: scale(2);
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+main div svg {
+    display: block;
+}
+
+main div svg {
+    animation: slide-down 1s linear infinite;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}

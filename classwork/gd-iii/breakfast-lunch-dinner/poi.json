@@ -1,0 +1,15 @@
+{
+    "name": "Breakfast Lunch Dinner",
+    "version": 0.1,
+    "poi": [
+        {
+            "name": "Xai Xai",
+            "description": "It is a loveley dingy, but not dodgy place in melville; and you can smoke",
+            "address": "",
+            "gps": {
+                "longitude": 28.008381093090467,
+                "latitude": -26.177276007735813
+            }
+        }
+    ]
+}

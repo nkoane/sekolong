@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+            }
+
+            .calculator {
+                width: 300px;
+                margin: 0 auto;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                padding: 20px;
+            }
+
+            .calculator__display {
+                font-size: 36px;
+                text-align: right;
+                padding: 10px;
+                border: none;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            .calculator__button {
+                font-size: 24px;
+                padding: 10px;
+                border: none;
+                background-color: #e0e0e0;
+                border-radius: 5px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .calculator__button:hover {
+                background-color: #d0d0d0;
+            }
+
+            .calculator__button--equals {
+                background-color: #f44336;
+                color: #fff;
+            }
+
+            .calculator__button--equals:hover {
+                background-color: #e53935;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" class="calculator__display" id="display" readonly />
+
+            <button class="calculator__button" onclick="clearDisplay()">C</button>
+            <button class="calculator__button" onclick="addToDisplay('/')">/</button>
+            <button class="calculator__button" onclick="addToDisplay('*')">*</button>
+            <button class="calculator__button" onclick="addToDisplay('-')">-</button>
+
+            <button class="calculator__button" onclick="addToDisplay('7')">7</button>
+            <button class="calculator__button" onclick="addToDisplay('8')">8</button>
+            <button class="calculator__button" onclick="addToDisplay('9')">9</button>
+            <button class="calculator__button" onclick="addToDisplay('+')">+</button>
+
+            <button class="calculator__button" onclick="addToDisplay('4')">4</button>
+            <button class="calculator__button" onclick="addToDisplay('5')">5</button>
+            <button class="calculator__button" onclick="addToDisplay('6')">6</button>
+            <button class="calculator__button calculator__button--equals" onclick="calculate()">=</button>
+
+            <button class="calculator__button" onclick="addToDisplay('1')">1</button>
+            <button class="calculator__button" onclick="addToDisplay('2')">2</button>
+            <button class="calculator__button" onclick="addToDisplay('3')">3</button>
+            <button class="calculator__button" onclick="addToDisplay('.')">.</button>
+
+            <button class="calculator__button" onclick="addToDisplay('0')">0</button>
+            <button class="calculator__button" onclick="addToDisplay('(')">(</button>
+            <button class="calculator__button" onclick="addToDisplay(')')">)</button>
+        </div>
+
+        <script>
+            function addToDisplay(value) {
+                document.getElementById('display').value += value;
+            }
+
+            function clearDisplay() {
+                document.getElementById('display').value = '';
+            }
+
+            function calculate() {
+                var expression = document.getElementById('display').value;
+                var result = eval(expression);
+                document.getElementById('display').value = result;
+            }
+        </script>
+    </body>
+</html>

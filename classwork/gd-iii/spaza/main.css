@@ -1,0 +1,245 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+body a {
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.2s ease-in-out;
+}
+
+body a:hover {
+    color: blue;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* place last item to the bottom */
+    justify-content: space-between;
+}
+
+main#app h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+main#app {
+    margin: 0 auto;
+    width: 80vw;
+    min-width: 40vw;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main#kitchen {
+    background-color: blue;
+    /*
+    */
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 40vw;
+    padding: 20px;
+    background-color: #fff;
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main#app form#order.hide {
+    display: none;
+}
+
+main#app form p {
+    display: flex;
+    gap: 1rem;
+    background-color: #e8e8e8;
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+
+main#app form div p {
+    padding: 0;
+    margin: 0;
+}
+
+main#app form p select {
+    font-size: 1.2rem;
+    flex-grow: 1;
+}
+
+main#app form p select option {
+    padding: 0 0.8rem;
+}
+
+main#app form p input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 0.2rem;
+    text-align: right;
+    width: 3ch;
+}
+
+div.information {
+    display: flex;
+    gap: 1rem;
+}
+
+main#app form p.money {
+    display: flex;
+    background: none;
+    justify-content: space-between;
+}
+
+main#app form p.money label {
+    display: flex;
+    flex-direction: column-reverse;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+main#app form p.money label span {
+    display: inline-block;
+    margin-top: 0.4rem;
+    margin-left: 0.4rem;
+    font-size: 0.6rem;
+    color: #999;
+}
+
+main#app form p.money label.error span {
+    color: red;
+}
+
+main#app form p.money label.error input {
+    border-color: red;
+}
+
+main#app form p.action button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+main#app form p.money label input {
+    flex-grow: 1;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 4ch;
+}
+
+main#app form p.action {
+    background: none;
+}
+
+main#app form p.action label {
+    flex-grow: 1;
+}
+main#app form p.action label button {
+    width: auto;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.4rem;
+    border: 1px solid #333;
+    border-radius: 0.4rem;
+
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+main#app form p.action label button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+main#kitchen ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main#kitchen ol li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 0.4rem;
+
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.2rem;
+    place-items: center;
+}
+
+main#kitchen ol li.order-done {
+    animation: fade 1s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+main#kitchen ol li.order p.order-number {
+    width: 4ch;
+}
+main#kitchen ol li.order p.order-detail {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+main#kitchen ol li.order p.order-time {
+    flex-shrink: 1;
+}
+
+main#kitchen ol li p {
+    margin: 0;
+    padding: 0;
+}
+main#kitchen ol li p button {
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #333;
+    border-radius: 0.2rem;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+main#kitchen ol li p button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+main#kitchen ol li:nth-child(even) {
+    background-color: #000;
+    color: #fff;
+}
+
+main#kitchen ol li:nth-child(even) p button {
+    background-color: #000;
+    color: #fff;
+}
+
+main#kitchen ol li:nth-child(even) p button:hover {
+    background-color: #fff;
+    color: #333;
+}

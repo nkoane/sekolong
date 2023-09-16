@@ -1,0 +1,51 @@
+body {
+    background-color: #000;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+h1 {
+    background-color: #444;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    scroll-snap-align: start;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+h1:nth-child(2n) {
+    background-color: white;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    color: #444;
+}
+
+h1#light {
+    background-image: url('backgrounds/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1#light a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+/*
+
+*/
+h1#light a:hover {
+    opacity: 0.3;
+}

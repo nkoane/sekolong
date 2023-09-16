@@ -1,0 +1,18 @@
+body {
+    background-color: #c0c0c0;
+    margin: 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+#app {
+    width: 64%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#map {
+    width: 100%;
+    height: 70vh;
+    background-color: blue;
+}

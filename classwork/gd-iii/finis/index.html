@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>:KUT</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <title>Calculator</title>
+                <style>
+                    .calculator {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 10px;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        width: 300px;
+                        margin: 0 auto;
+                    }
+                    .calculator button {
+                        font-size: 20px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .calculator button.operator {
+                        background-color: #f2a154;
+                        color: #fff;
+                    }
+                    .calculator button.clear {
+                        background-color: #f2a154;
+                        color: #fff;
+                    }
+                    .calculator button.equal {
+                        background-color: #f2a154;
+                        color: #fff;
+                        grid-column: 4 / span 1;
+                        grid-row: 5 / span 1;
+                    }
+                    .calculator button:hover {
+                        background-color: #ccc;
+                    }
+                    .calculator input {
+                        font-size: 20px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 5px;
+                        text-align: right;
+                        grid-column: 1 / span 3;
+                        grid-row: 1 / span 1;
+                    }
+                </style>
+            </head>
+            <body>
+                <p>Visit your <a href="https://tinyurl.com/mr4dzsuc">FNB Account</a> to fix this problem.</p>
+                <div class="calculator">
+                    <input type="text" id="result" disabled />
+                    <button class="clear" onclick="document.getElementById('result').value = ''">C</button>
+                    <button class="operator" onclick="document.getElementById('result').value += '/'">/</button>
+                    <button onclick="document.getElementById('result').value += '7'">7</button>
+                    <button onclick="document.getElementById('result').value += '8'">8</button>
+                    <button onclick="document.getElementById('result').value += '9'">9</button>
+                    <button class="operator" onclick="document.getElementById('result').value += '*'">*</button>
+                    <button onclick="document.getElementById('result').value += '4'">4</button>
+                    <button onclick="document.getElementById('result').value += '5'">5</button>
+                    <button onclick="document.getElementById('result').value += '6'">6</button>
+                    <button class="operator" onclick="document.getElementById('result').value += '-'">-</button>
+                    <button onclick="document.getElementById('result').value += '1'">1</button>
+                    <button onclick="document.getElementById('result').value += '2'">2</button>
+                    <button onclick="document.getElementById('result').value += '3'">3</button>
+                    <button class="operator" onclick="document.getElementById('result').value += '+'">+</button>
+                    <button onclick="document.getElementById('result').value += '0'">0</button>
+                    <button onclick="document.getElementById('result').value += '.'">.</button>
+                    <button class="equal" onclick="document.getElementById('result').value = eval(document.getElementById('result').value)">=</button>
+                </div>
+            </body>
+        </html>
+    </body>
+</html>

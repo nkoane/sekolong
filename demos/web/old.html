@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS:RND</title>
+        <style>
+            body {
+                margin: 0;
+                font-size: 1.2rem;
+                font-family: sans-serif;
+                background-color: #fff;
+            }
+            .parent {
+                display: grid;
+                height: 100vh;
+                place-items: center;
+            }
+
+            .child {
+                height: 30%;
+                width: 30%;
+                background-color: #f00;
+                border-radius: 1em;
+
+                background-image: url('images/woman-586185_1280.jpg');
+                background-size: cover;
+                aspect-ratio: 1/1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

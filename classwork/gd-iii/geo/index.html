@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+
+        <title>G:EO</title>
+    </head>
+    <body>
+        <main id="app">
+            <h1>G:EO</h1>
+            <div id="map"></div>
+            <div id="location">gps:location</div>
+        </main>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibHRkbiIsImEiOiJjbGRhMjM3eWIwZTIzM29zenJrZ2VyZWduIn0.CJs89jTiBNbmXQwqVdOhFA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                /* mapbox://styles/mapbox/light-v11 */
+                zoom: 15,
+            });
+            map.on('load', (ev) => {
+                const marker = new mapboxgl.Marker();
+
+                navigator.geolocation.watchPosition((pos) => {
+                    //
+                    console.log(pos.coords);
+
+                    map.setCenter([pos.coords.longitude, pos.coords.latitude]);
+
+                    marker.setLngLat([pos.coords.longitude, pos.coords.latitude]);
+                    marker.addTo(map);
+
+                    document.getElementById('location').innerHTML = `<ul>
+                        <li>accuracy: ${pos.coords.accuracy}m</li>
+                        <li>pos: ${pos.coords.longitude}, ${pos.coords.latitude}</li>
+                        <li>altitude: ${pos.coords.altitude}m</li>
+                        <li>heading: ${pos.coords.heading}&deg;</li>
+                        <li>speed: ${pos.coords.speed}m/s</li>
+                    </ul>`;
+                });
+            });
+        </script>
+
+        <script defer src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- add favicon -->
+        <link rel="shortcut icon" href="hard-drive.svg" type="image/svg" />
+        <title>&amp;Close.</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <main>
+            <p>Here:</p>
+            <form id="dipalo">
+                <input name="a" />
+                <span name="operation">+</span>
+                <select>
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">&times;</option>
+                    <option value="divide">&divide;</option>
+                </select>
+                <input name="b" />
+                <button type="submit">=</button>
+                <input name="c" readonly />
+            </form>
+        </main>
+
+        <script defer src="main.js"></script>
+    </body>
+</html>

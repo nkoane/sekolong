@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #939393;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    display: grid;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    background-color: red;
+    border-radius: 100%;
+    color: #777;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    transition: all 1s ease-in-out;
+}
+
+/*
+h1:hover {
+    animation: stx 1s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+    color: red;
+}*/
+
+@keyframes stx {
+    0% {
+    }
+
+    100% {
+        padding: 20rem;
+    }
+}

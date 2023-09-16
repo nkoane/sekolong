@@ -1,0 +1,10 @@
+{
+    "starch": [],
+    "meat": [
+        { "type": "Chicken Stew", "cost": 140 },
+        { "type": "Beef Stew", "cost": 150 },
+        { "type": "Mogodu", "cost": 35 },
+        { "type": "Steak", "cost": 60 },
+        { "type": "Sebete", "cost": 20 }
+    ]
+}

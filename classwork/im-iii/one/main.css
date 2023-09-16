@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-size: 10rem;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+div {
+    background-color: #fff;
+    color: #000;
+    padding: 5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+    transition: all 1s ease;
+}
+
+div:hover {
+    border: 1rem solid #444;
+}
+
+div.done {
+    width: 100vw;
+    height: 100vw;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+div.done:hover {
+    border: none;
+}
+
+span {
+    display: none;
+}
+
+span.pulse {
+    animation: pulse 1s infinite;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}

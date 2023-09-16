@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- add favicon -->
+        <link rel="shortcut icon" href="gift.svg" type="image/svg" />
+        <link defer rel="stylesheet" href="main.css" />
+        <title>SPAZA</title>
+    </head>
+    <body>
+        <section>
+            <main id="app">
+                <h1><a href="/">SPAZA</a></h1>
+                <form id="order">
+                    <divc class="produce">
+                        <p>
+                            <select name="meat" id="meat">
+                                <option value="24">Kgomo</option>
+                                <option value="14">Kolobe</option>
+                                <option value="34">Nku</option>
+                                <option value="8">Kgogo</option>
+                            </select>
+                            <input readonly id="meat-cost" value="0" class="cost" />
+                        </p>
+                        <p>
+                            <select name="starch" id="starch">
+                                <option value="6">Bogobe</option>
+                                <option value="12">Rice</option>
+                                <option value="16">Stampa</option>
+                            </select>
+                            <input readonly id="starch-cost" value="0" class="cost" />
+                        </p>
+                    </divc>
+                    <div class="information">
+                        <p class="money">
+                            <label>
+                                <span>Total</span>
+                                <input readonly id="total" value="0" />
+                            </label>
+                            <label>
+                                <span>Paid</span>
+                                <input id="paid" value="0" />
+                            </label>
+                            <label>
+                                <span>Change</span>
+                                <input readonly id="change" value="0" />
+                            </label>
+                        </p>
+                        <p class="action">
+                            <label>
+                                <button id="submit-order" type="submit">ORDER</button>
+                            </label>
+                        </p>
+                    </div>
+                </form>
+            </main>
+
+            <main id="kitchen">
+                <!-- list of orders places -->
+                <ol id="orders"></ol>
+            </main>
+        </section>
+        <script defer src="main.js" type="module"></script>
+    </body>
+</html>

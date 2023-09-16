@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SNAP:CSS</title>
+        <style>
+            body {
+                background-color: #fff;
+                color: #000;
+                font-size: 1rem;
+                font-family: sans-serif;
+                margin: 0;
+                scroll-behavior: smooth;
+            }
+            main {
+                height: 100vh;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+            }
+
+            main section {
+                font-size: 10rem;
+                font-weight: 900;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #ff0;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+            }
+
+            main section:nth-child(2n) {
+                background-color: #0ff;
+            }
+
+            main ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: 5rem;
+                background-color: #444;
+                gap: 0.5rem;
+                position: fixed;
+                width: 100vw;
+                display: none;
+            }
+
+            main ul li {
+                flex-grow: 1;
+            }
+
+            main ul li a {
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                display: block;
+                padding: 1rem 2rem;
+            }
+
+            main ul li a:hover {
+                background-color: #f00;
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <ul>
+                <li><a href="#section-1">01</a></li>
+                <li><a href="#section-2">02</a></li>
+                <li><a href="#section-3">03</a></li>
+                <li><a href="#section-4">04</a></li>
+                <li><a href="#section-5">05</a></li>
+            </ul>
+            <section id="section-1">
+                <div>01</div>
+            </section>
+            <section id="section-2">
+                <div>02</div>
+            </section>
+            <section id="section-3">
+                <div>03</div>
+            </section>
+            <section id="section-4">
+                <div>04</div>
+            </section>
+            <section id="section-5">
+                <div>05</div>
+            </section>
+        </main>
+    </body>
+</html>

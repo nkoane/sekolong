@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+nav#nav {
+    height: 6rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.125rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    bottom: 0;
+}
+
+nav#nav a {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: block;
+    text-decoration: none;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+main#app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: both mandatory;
+    display: flex;
+}
+
+main .block {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 12rem;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#one {
+    background-color: rgb(245, 235, 234);
+}
+
+#two {
+    background-color: rgb(210, 180, 222);
+}
+
+#three {
+    background-color: rgb(169, 204, 227);
+}
+
+#four {
+    background-color: rgb(163, 228, 215);
+}
+
+#five {
+    background-color: rgb(253, 235, 208);
+}
