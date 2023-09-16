@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>V:OVER</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+    <body>
+        <div class="video-container">
+            <div class="overlay-text"><span>Your Text Here</span></div>
+            <video id="bgVideo" autoplay loop muted>
+                <source src="videos/selfish.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <script>
+            const video = document.getElementById('bgVideo');
+
+            document.addEventListener('keydown', function (event) {
+                // Key code for the spacebar is 32
+
+                if (event.keyCode === 77) {
+                    console.log('mute or unmute', video.muted);
+
+                    if (video.muted === true) {
+                        video.muted = false;
+                    } else {
+                        video.muted = true;
+                    }
+                }
+
+                // Key code for the spacebar is 32
+                if (event.keyCode === 32) {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
