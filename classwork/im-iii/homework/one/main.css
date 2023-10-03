@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background-color: gray;
+}
+
+#container {
+    background-color: red;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+}
+
+#left {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+#left div {
+    background-color: purple;
+    flex-grow: 1;
+}
+
+#left div:nth-child(2n) {
+    background-color: green;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 10%;
+}
+
+#right {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+#right div.column {
+    flex-grow: 1;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#right div.column div.copy {
+    background-color: pink;
+}
+
+#right div.column div.figure {
+    background-color: brown;
+}

@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+main.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+header h1 {
+    margin: 0;
+}
+section.blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    aspect-ratio: 1;
+}
+section.blocks div {
+    background-color: gold;
+}
+footer {
+    background-color: green;
+}
+
+footer h2 {
+    margin: 0;
+}

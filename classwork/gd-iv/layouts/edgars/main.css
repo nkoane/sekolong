@@ -1,0 +1,82 @@
+body {
+    background-color: white;
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+#container .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#container .row div {
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/0.75;
+}
+
+#container .middle {
+    background-image: url('https://picsum.photos/seed/bro/1000');
+    background-size: cover;
+    background-position: center;
+}
+
+#container .top .col:first-child {
+    background-image: url('https://picsum.photos/1000?top-frist');
+}
+
+#container .top .col:last-child {
+    background-image: url('https://picsum.photos/1000?top-last');
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#container .bottom .col:first-child {
+    background-image: url('https://picsum.photos/1000?bottom-frist');
+}
+
+#container .bottom .col:last-child {
+    background-image: url('https://picsum.photos/1000?bottom-last');
+    display: grid;
+    place-items: center;
+}
+
+#container .top .col:last-child h1,
+#container .bottom .col:last-child h1 {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.6rem;
+}
+#container .middle .col:first-child {
+    display: grid;
+    place-items: center;
+}
+#container .middle .col:first-child div {
+    width: 60%;
+}
+
+#container .middle .col:first-child div h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+#container .middle .col:last-child {
+    display: grid;
+    place-items: center;
+}
+#container .middle .col:last-child div {
+    width: 60%;
+    background-image: url('https://picsum.photos/1000?middle-image');
+    background-size: cover;
+    background-position: center;
+}

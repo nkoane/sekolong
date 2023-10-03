@@ -1,0 +1,57 @@
+body {
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: beige;
+    gap: 3rem;
+}
+
+/* media query to remove the grid display when the width is 600px or less */
+@media (max-width: 600px) {
+    main {
+        display: block;
+    }
+}
+
+main > div {
+    background-color: white;
+    padding: 1rem;
+}
+
+main div.top {
+    background-color: silver;
+    background-image: url('https://picsum.photos/seed/dogs/1000');
+    background-size: cover;
+    background-position: center;
+}
+
+main div.bottom {
+    background-color: burlywood;
+    background-image: url('https://picsum.photos/seed/cats/1000');
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+main div.right {
+    background-color: yellow;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+*/
+main div.right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main div.right div {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
