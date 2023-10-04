@@ -1,0 +1,64 @@
+body {
+    background-color: pink;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    background-color: white;
+    transition: background-color 0.5s ease;
+}
+
+a:hover {
+    background-color: #333;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+header {
+    flex-shrink: 0;
+    flex-grow: 0;
+    & nav {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+main div#sectors {
+    display: grid;
+    background-color: gold;
+    padding: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+main div#sectors section {
+    height: inherit;
+    background-color: beige;
+    place-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    & h1 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
+main div#sectors section {
+    display: none;
+
+    &:target {
+        display: grid;
+    }
+}
