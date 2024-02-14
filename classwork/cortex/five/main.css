@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(224, 224, 224);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    width: 460px;
+    background-color: #f0f0f0;
+    margin: 6rem auto 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+}
+
+main div {
+    background-color: white;
+    padding: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 0rem;
+    border-bottom: 0.2rem dashed #f0f0f0;
+    display: flex;
+    gap: 2rem;
+}
+
+main div span {
+    background-color: red;
+    display: block;
+    width: 90px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+main#app form {
+    background-color: white;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+main#app form p {
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+}
+
+main#app form p input {
+    border-radius: 0.4rem;
+    padding: 0 0.4rem;
+}
+
+main#app form p.submit-button,
+main#app form p.remember-me {
+    display: block;
+    text-align: right;
+}

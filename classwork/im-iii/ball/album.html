@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dr.</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: #f0f0f0;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            main {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 5rem;
+                background-image: url('animated_loader_gif_n6b5x0.gif');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-color: white;
+            }
+
+            main div img {
+                display: block;
+                border: 20px solid #fff;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all 0.5s linear;
+            }
+
+            main div img.show {
+                opacity: 1;
+            }
+
+            main nav {
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            main nav a {
+                text-decoration: none;
+                color: black;
+                background-color: yellow;
+                transition: color 0.5s ease;
+            }
+
+            main nav a:hover {
+                color: yellow;
+                background-color: black;
+            }
+
+            main div#progress-bar {
+                width: 100%;
+                height: 0.25rem;
+                background-color: red;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 0.25s ease;
+            }
+
+            main div#progress-bar.loaded {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <img src="https://picsum.photos/800/600" alt="random picture" class="show" />
+            </div>
+            <div id="progress-bar"></div>
+            <nav>
+                <a href="#01" data-url="https://picsum.photos/1600/1200">one</a>
+                <a href="#02" data-url="https://picsum.photos/1600/1200">two</a>
+                <a href="#03" data-url="https://picsum.photos/1600/1200">three</a>
+            </nav>
+        </main>
+        <script defer>
+            const picture = document.querySelector('main div img'); // grabbing the image tag
+            const links = document.querySelectorAll('main nav a'); // collecting all  links in nav
+            const progressBar = document.querySelector('#progress-bar');
+
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'blob';
+
+            xhr.addEventListener('progress', (event) => {
+                if (event.lengthComputable) {
+                    const percentComplete = (event.loaded / event.total) * 100;
+                    progressBar.style.width = percentComplete + '%';
+
+                    console.log(`Progress: ${percentComplete}%`);
+                } else {
+                    console.log('Progress not measurable');
+                }
+
+                console.log(event.loaded);
+            });
+
+            xhr.addEventListener('load', function (event) {
+                console.log('PD: Picture loaded', event.loaded, event.total);
+                picture.classList.add('show');
+                progressBar.classList.add('loaded');
+                const blob = xhr.response;
+                picture.src = URL.createObjectURL(blob);
+            });
+
+            picture.addEventListener('error', function () {
+                console.log('Error loading picture');
+            });
+
+            // interating through the links
+            links.forEach(function (link) {
+                // adding a click event
+                link.addEventListener('click', function (ev) {
+                    // changing the picture src
+                    const randomNumber = Math.round(Math.random() * 1000);
+                    const imgSRC = link.getAttribute('data-url') + '?random=' + randomNumber;
+                    console.log(randomNumber, imgSRC);
+
+                    picture.classList.remove('show');
+                    progressBar.classList.remove('loaded');
+                    // picture.src = imgSRC;
+
+                    xhr.open('GET', imgSRC, true);
+                    xhr.send();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ballin'</title>
+        <style>
+            div {
+                background-color: red;
+                width: 50px;
+                aspect-ratio: 1;
+                border-radius: 100%;
+                position: relative;
+                transition: all 1s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+
+        <script>
+            const circle = document.querySelector('div');
+
+            document.addEventListener('click', function (event) {
+                circle.style.top = event.clientY - circle.offsetHeight / 2 + 'px';
+                circle.style.left = event.clientX - circle.offsetWidth / 2 + 'px';
+                // circle.style.transform = `scale(${Math.round(Math.random() * 10)})`;
+            });
+        </script>
+    </body>
+</html>

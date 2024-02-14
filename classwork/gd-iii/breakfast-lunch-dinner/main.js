@@ -6,7 +6,7 @@ window.addEventListener('load', async () => {
 
     document.title = json.name;
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoibHRkbiIsImEiOiJjbGl1MjM5ODIxc2V6M2tvMWpxNzQxcHF3In0.8RRsebPgocLYzJX1LniMKA';
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN_HERE';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',

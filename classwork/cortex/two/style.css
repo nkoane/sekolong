@@ -1,0 +1,35 @@
+/* style.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns with a 1:2:1 ratio */
+}
+
+.column {
+    padding: 10px;
+}
+
+.image {
+    flex: 1; /* Adjust as needed */
+}
+
+.content {
+    flex: 2; /* Adjust as needed */
+}
+
+.navigation {
+    flex: 1; /* Adjust as needed */
+}
+
+img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+}

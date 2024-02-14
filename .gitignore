@@ -1,3 +1,5 @@
 .vite/
 .vscode/
 *.mp4
+.env
+config.json

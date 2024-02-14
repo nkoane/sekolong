@@ -1,0 +1,49 @@
+body {
+    background-color: #e0e0e0;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+main div {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main div#one {
+    background-image: url('https://picsum.photos/seed/one/1200');
+    color: white;
+}
+
+main div#two {
+    background-image: url('https://picsum.photos/seed/two/1200');
+
+    a {
+        color: black;
+    }
+}
+
+main div#three {
+    background-image: url('https://picsum.photos/seed/three/1200');
+    color: white;
+}
+
+main div#four {
+    background-image: url('https://picsum.photos/seed/four/1200');
+}
+
+main div#five {
+    background-image: url('https://picsum.photos/seed/five/1200');
+    color: white;
+}
+
+main div h1 {
+    margin: 0;
+    font-size: 4rem;
+}

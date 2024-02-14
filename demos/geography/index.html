@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giorgia</title>
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+                color: #000;
+                background-color: #f0f0f0;
+            }
+            #app {
+                height: 100vh;
+                width: calc(100vw - 2rem);
+                padding: 1rem;
+            }
+
+            #map {
+                width: 100%;
+                height: 90%;
+                border-radius: 1rem;
+            }
+
+            #app p {
+                margin: 0 auto;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="app">
+            <div id="map">?</div>
+            <p id="info">GPS: Coordings</p>
+        </main>
+
+        <script defer>
+            mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN_HERE';
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                center: [-74.5, 40], // starting position [lng, lat]
+                zoom: 17, // starting zoom
+            });
+            navigator.geolocation.watchPosition(
+                (pos) => {
+                    const lng = pos.coords.longitude;
+                    const lat = pos.coords.latitude;
+                    const info = document.getElementById('info');
+                    info.innerHTML = `GPS: ${lng}, ${lat}`;
+
+                    map.setCenter([lng, lat]);
+
+                    // Create a new marker.
+                    const marker = new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+                },
+                () => {
+                    alert('We could not get your location');
+                }
+            );
+        </script>
+    </body>
+</html>

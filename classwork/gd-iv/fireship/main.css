@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+main {
+    display: grid;
+    justify-content: center;
+}
+section {
+    min-height: 100vh;
+    border-bottom: 1px solid #111;
+    display: grid;
+    place-items: center;
+    transition: all 3s ease 0s;
+    transform: translateX(-100%);
+}
+
+section.hidden {
+    opacity: 0;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section h1 {
+    margin-top: 0;
+}
+
+section.show .killa-bees {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+section.hidden .killa-bees li.bee {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateX(-100%);
+}
+
+section.show .killa-bees li.bee {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section.show .killa-bees li.bee:nth-child(1) {
+    transition-delay: 3.2s;
+}
+
+section.show .killa-bees li.bee:nth-child(2) {
+    transition-delay: 3.4s;
+}
+
+section.show .killa-bees li.bee:nth-child(3) {
+    transition-delay: 3.6s;
+}
+
+section.show .killa-bees li.bee:nth-child(4) {
+    transition-delay: 3.8s;
+}
+
+section.show .killa-bees li.bee:nth-child(5) {
+    transition-delay: 4s;
+}
+
+.killa-bees li.bee img {
+    border-radius: 1rem;
+    display: block;
+}

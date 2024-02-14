@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 });
 
 const init = () => {
-    mapboxgl.accessToken = 'pk.eyJ1IjoibHRkbiIsImEiOiJjbGoybWhydXIwZDRwM2RvMGZjZ2dwaWR2In0.vvl3SlGi0BD1DVcs2qYwqQ';
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN_HERE';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',

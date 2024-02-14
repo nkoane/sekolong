@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SL</title>
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #666;
+                position: relative;
+            }
+            .box {
+                width: 400px;
+                background-color: green;
+                aspect-ratio: 1/1;
+                overflow: hidden;
+                display: grid;
+                place-items: center;
+                border-radius: 10px;
+                position: relative;
+            }
+            .box::before {
+                position: absolute;
+                content: '';
+                background: tomato;
+                width: 50%;
+                height: 180%;
+                transform: rotate(45deg);
+                transition: 3s;
+            }
+
+            .box:hover::before {
+                animation: animate 2s infinite;
+            }
+
+            @keyframes animate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                50% {
+                    filter: hue-rotate(45deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .box::after {
+                position: absolute;
+                content: '';
+                inset: 5px;
+                background: tomato;
+            }
+
+            .boogie {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                background-color: tomato;
+                position: relative;
+                display: none;
+            }
+
+            .boogie:hover {
+                background: none;
+                cursor: pointer;
+            }
+
+            .boogie::before {
+                content: '';
+                background-color: black;
+                position: absolute;
+                content: '';
+                display: inline-block;
+                width: 0%;
+                height: 40px;
+                transition: 1s;
+                z-index: -1;
+                /* i want to pseudo-elemt::before z-index to be behind the parent element */
+            }
+
+            .boogie:hover::before {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="box"></div>
+            <div class="boogie">One Two Three Thousand Problems</div>
+        </main>
+    </body>
+</html>

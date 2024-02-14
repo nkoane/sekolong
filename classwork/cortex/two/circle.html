@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>XXX</title>
+        <style>
+            span {
+                display: block;
+                width: 100px;
+                aspect-ratio: 1;
+                background-color: red;
+                border-radius: 100%;
+                left: 0;
+                top: 0;
+                position: relative;
+                transition: all 0.3s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <span></span>
+    </body>
+    <script>
+        document.addEventListener('click', function (event) {
+            const span = document.querySelector('span');
+            const width = span.offsetWidth;
+            const height = span.offsetHeight;
+            const left = event.clientX - width / 2;
+            const top = event.clientY - height / 2;
+            span.style.left = left + 'px';
+            span.style.top = top + 'px';
+        });
+    </script>
+</html>

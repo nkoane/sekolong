@@ -1,0 +1,140 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: black;
+    position: relative;
+    z-index: 100;
+    height: 50px;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        align-items: center;
+        height: 100%;
+    }
+
+    nav a {
+        color: white;
+    }
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -50px;
+    overflow: hidden;
+
+    p {
+        margin: 0;
+    }
+
+    div {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10rem;
+        transition: all 1s ease;
+        opacity: 0;
+    }
+
+    div p,
+    div h1,
+    div h2 {
+        max-width: 60%;
+    }
+
+    div:target {
+        display: block;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+    div#item-1 {
+        background-image: url('https://picsum.photos/seed/six/1200');
+    }
+    div#item-2 {
+        background-image: url('https://picsum.photos/seed/seven/1200');
+    }
+    div#item-3 {
+        background-image: url('https://picsum.photos/seed/eight/1200');
+    }
+    div#item-4 {
+        background-image: url('https://picsum.photos/seed/ni/1200');
+    }
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    height: 180px;
+    bottom: 50px;
+    top: -180px;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    gap: 2rem;
+
+    div#arrow-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 6rem);
+        margin-left: 8rem;
+        gap: 3em;
+        a {
+            color: white;
+            font-size: 3rem;
+            width: 6rem;
+            aspect-ratio: 1;
+            background-color: white;
+            display: grid;
+            place-items: center;
+            border-radius: 100%;
+        }
+    }
+
+    div#thumbnail-navigation {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        display: grid;
+
+        a {
+            color: white;
+            background-color: black;
+            display: grid;
+            width: 100%;
+            aspect-ratio: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: end;
+            border-radius: 1rem;
+
+            span {
+                padding: 1rem;
+            }
+        }
+
+        a#thumb-1 {
+            background-image: url('https://picsum.photos/seed/six/1200');
+        }
+        a#thumb-2 {
+            background-image: url('https://picsum.photos/seed/seven/1200');
+        }
+        a#thumb-3 {
+            background-image: url('https://picsum.photos/seed/eight/1200');
+        }
+        a#thumb-4 {
+            background-image: url('https://picsum.photos/seed/ni/1200');
+        }
+    }
+}

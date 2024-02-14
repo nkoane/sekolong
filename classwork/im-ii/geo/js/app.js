@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibHRkbiIsImEiOiJjajhvN3J1a2gwMGN4MnJvMHkyNDl1bDlxIn0.qM0mzPToSlB0aMwkJqND2w';
+mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN_HERE';
 let map;
 
 const getMapping = async () => {

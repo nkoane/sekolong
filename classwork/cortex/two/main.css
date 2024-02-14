@@ -1,0 +1,60 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 33% 13%;
+    gap: 2%;
+    width: 80%;
+    margin: 120px auto 0 auto;
+}
+
+article {
+    background-color: rgb(248, 185, 185);
+    padding: 50% 2rem 0 2rem;
+    line-height: 1.5rem;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ol li {
+    margin-bottom: 2%;
+}
+
+ol li a {
+    color: red;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    padding: 10px 5px 10px 10px;
+}
+
+ol li a:hover {
+    color: black;
+    background-color: red;
+}
+
+ol li a.selected {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+a {
+    display: block;
+}
+
+a img {
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+a img:hover {
+    outline: 1rem solid #ff0;
+}
