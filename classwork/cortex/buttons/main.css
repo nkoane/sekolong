@@ -55,7 +55,8 @@ nav a {
     height: 50px;
     display: grid;
     place-items: center;
-    border-radius: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     color: white;
     text-decoration: none;
     transition: all 1s ease-in-out;
@@ -65,11 +66,27 @@ nav a {
 nav a:hover {
     background-color: white;
     color: black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+nav a:active {
+    transform: rotate(60deg);
+}
+
+nav a:visited {
+    background-color: grey;
 }
 
 main:has(div#one:target) nav a:nth-child(1) {
     background-color: yellow;
     color: black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: scale(1.2);
 }
 
 main:has(div#two:target) nav a:nth-child(2) {
