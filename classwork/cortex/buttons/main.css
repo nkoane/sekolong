@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(to bottom, black 0%, white 95%);
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+main section {
+    min-height: 400px;
+}
+
+main div {
+    display: none;
+    border-bottom: 10px solid black;
+}
+
+main div img {
+    display: block;
+}
+
+main div:target {
+    display: block;
+    animation: buffalo 1s ease-in;
+}
+
+@keyframes buffalo {
+    0% {
+        opacity: 0.5;
+        filter: saturate(0);
+    }
+    100% {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+nav {
+    width: calc(50px * 5 + 10px * 4);
+    margin: 0 auto 0 auto;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 10px;
+    position: relative;
+    top: -30px;
+}
+
+nav a {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    color: white;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+main:has(div#one:target) nav a:nth-child(1) {
+    background-color: yellow;
+    color: black;
+}
+
+main:has(div#two:target) nav a:nth-child(2) {
+    background-color: yellow;
+    color: black;
+}
+
+main:has(div#three:target) nav a:nth-child(3) {
+    background-color: yellow;
+    color: black;
+}
+
+main:has(div#four:target) nav a:nth-child(4) {
+    background-color: yellow;
+    color: black;
+}
+
+main:has(div#five:target) nav a:nth-child(5) {
+    background-color: yellow;
+    color: black;
+}
