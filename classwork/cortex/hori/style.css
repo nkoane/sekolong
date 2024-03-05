@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 130px 360px 250px;
+    gap: 35px;
+    width: 810px;
+    margin: 120px auto 0 auto;
+}
+
+main section div {
+    min-height: 160px;
+}
+
+main section div.bottom-left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* this is how we do our navigation  */
+
+main section {
+    display: none;
+}
+
+main section:first-child {
+    display: grid;
+}
+
+main:has(section:target) section {
+    display: none;
+}
+
+main:has(section:target) section:target {
+    display: grid;
+}

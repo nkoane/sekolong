@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  overflow-y: scroll;
+  /* Allow vertical scrolling */
+  scroll-behavior: smooth;
+  /* Smooth scrolling for the body */
+  scroll-snap-type: y mandatory;
+  /* Force snapping on the y-axis */
+}
+
+.image-slider {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  /*  overflow: hidden; */
+  /* Still hide image overflow */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.image-slider a {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  /* Align snapping to the top of the image */
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

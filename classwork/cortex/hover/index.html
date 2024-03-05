@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HOVER</title>
+        <style>
+            body {
+                margin: 0;
+                background-image: url('bg-cross.png');
+                background-color: #fff;
+            }
+            main {
+                width: 600px;
+                margin: 0 auto;
+                margin-top: 5rem;
+            }
+
+            main section {
+                height: 600px;
+                aspect-ratio: 1;
+                background-color: black;
+                padding: 1rem;
+                overflow: hidden;
+            }
+            main div {
+                display: none;
+                height: 600px;
+                background-color: #f0f0f0;
+                aspect-ratio: 1;
+                position: relative;
+                /*transform: translateX(-50%);*/
+            }
+
+            main div:target {
+                display: block;
+                animation: slide 5s forwards;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            nav {
+                display: flex;
+                gap: 1rem;
+                width: 600px;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+
+            nav a {
+                background-color: black;
+                width: 2rem;
+                aspect-ratio: 1;
+                display: block;
+                border-radius: 100%;
+                border: 1px solid white;
+            }
+
+            nav a.selected {
+                border: 1px solid red;
+                background-color: transparent;
+            }
+
+            nav a:target {
+                background-color: red;
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div id="one">
+                    <img src="https://picsum.photos/seed/thabo/600/600" alt="one" />
+                </div>
+                <div id="two">
+                    <img src="https://picsum.photos/seed/sizwe/600/600" alt="two" />
+                </div>
+                <div id="three">
+                    <img src="https://picsum.photos/seed/mandla/600/600" alt="three" />
+                </div>
+            </section>
+            <nav>
+                <a href="#one" title="one" class="selected"></a>
+                <a href="#two" title="two"></a>
+                <a href="#three" title="three"></a>
+            </nav>
+            <p>
+                <a href="https://wa.me/0114434854"><img alt="criss-cross" src="bg.png" style="background-color: red; padding: 2rem" /></a>
+            </p>
+        </main>
+        <script defer>
+            const points = document.querySelectorAll('nav a');
+            points.forEach((point) => {
+                point.addEventListener('click', (e) => {
+                    points.forEach((p) => p.classList.remove('selected'));
+                    e.target.classList.add('selected');
+                });
+            });
+            console.log(points);
+        </script>
+    </body>
+</html>
