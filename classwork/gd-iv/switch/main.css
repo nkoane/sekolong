@@ -1,0 +1,126 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 0.25rem;
+
+        a {
+            display: block;
+            border: 0.5rem solid #fff;
+            transition: all 0.75s ease-in-out;
+
+            &:active {
+                border-color: #ff0;
+                transform: scale(1.1) rotate(5deg);
+            }
+
+            img {
+                display: block;
+                filter: saturate(0);
+                opacity: 0.5;
+                transition: all 0.75s ease-in-out;
+                border-radius: 0.25rem;
+
+                &:hover {
+                    filter: saturate(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+main section {
+    img {
+        display: none;
+        width: 100%;
+
+        &:first-child {
+            display: block;
+        }
+    }
+}
+
+main:has(section img:target) {
+    section img {
+        display: none;
+        &:target {
+            display: block;
+        }
+    }
+}
+
+main:has(section img#one:target) nav a:nth-child(1) {
+    border-color: #ff0;
+    img {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+main:has(section img#two:target) nav a:nth-child(2) {
+    border-color: #ff0;
+    img {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+main:has(section img#three:target) nav a:nth-child(3) {
+    border-color: #ff0;
+    img {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+main:has(section img#four:target) nav a:nth-child(4) {
+    border-color: #ff0;
+    img {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+main:has(section img#five:target) nav a:nth-child(5) {
+    border-color: #ff0;
+    img {
+        opacity: 1;
+        filter: saturate(1);
+    }
+}
+
+/* 
+    a way to keep the navigation sticky
+main nav {
+    background-color: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+} 
+*/
