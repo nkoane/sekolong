@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.photo,
+div.foto {
+    background-color: #dd0;
+    height: 320px;
+    aspect-ratio: 2/1;
+}
+
+div.photo img {
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+div.foto p {
+    background-color: red;
+    height: 220px;
+    width: 170px;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    margin-left: 2rem;
+
+    background-image: url('jm-smaller.jpg');
+    background-size: cover;
+    background-position: -40px 0;
+}

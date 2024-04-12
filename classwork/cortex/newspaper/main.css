@@ -1,0 +1,41 @@
+main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+div {
+    min-height: 120px;
+}
+
+div#left {
+    background-color: green;
+}
+
+div#left div#top {
+    background-color: yellow;
+}
+
+div#left div#bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+
+div#left div#bottom > div {
+    background-color: blue;
+}
+
+div#right {
+    background-color: red;
+}
+
+div#right div#copy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+}
+
+div#right div#copy > div {
+    background-color: black;
+    color: white;
+}

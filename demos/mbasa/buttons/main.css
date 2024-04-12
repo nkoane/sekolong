@@ -1,0 +1,67 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main#app {
+}
+
+main header {
+    display: grid;
+    grid-template-columns: 1fr 135px 1fr;
+    column-gap: 28px;
+}
+
+main header div.left {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+main header div.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+main header div a {
+    background-color: #ff0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    /*       T/B  L/R */
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: brown;
+}
+
+main header div a:hover {
+    color: #ff0;
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+
+main header div.middle img {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+main section {
+    padding: 2rem;
+    color: black;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgb(248, 241, 63);
+    border-top: 1px solid rgb(248, 241, 63);
+}
+
+main footer {
+    font-size: 0.8rem;
+    margin: 2rem;
+}

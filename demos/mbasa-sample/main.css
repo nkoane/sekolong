@@ -1,0 +1,41 @@
+body {
+  background: radial-gradient(purple, pink);
+  margin: 0;
+}
+
+main {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(176, 32, 135, 1) 90%);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+
+article {
+  border: 2px solid pink;
+  text-align: center;
+  gap: 50px;
+}
+
+main>article>div {
+  background-color: whitesmoke;
+  border: 2px solid purple;
+}
+
+main>article {
+  background-color: gainsboro;
+}
+
+main article#two {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+main article#three {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+main article#four {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
