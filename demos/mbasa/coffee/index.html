@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BALLING</title>
+        <style>
+            body {
+                background-color: #fff;
+                color: #000;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            main {
+                background-color: #f0f0f0;
+                height: 100vh;
+            }
+
+            p {
+                margin: 0;
+                background-color: red;
+                width: 100px;
+                aspect-ratio: 1;
+                border-radius: 100%;
+                transition: all 0.5s ease-in-out;
+            }
+
+            p:hover {
+                background-color: #ff0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <p id="ball"></p>
+        </main>
+        <script defer>
+            const ball = document.getElementById('ball');
+
+            document.addEventListener('click', (e) => {
+                ball.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+
+                ball.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                const size = Math.sqrt(e.clientX * e.clientY);
+                ball.style.width = `${size}px`;
+                ball.style.height = `${size}px`;
+            });
+        </script>
+    </body>
+</html>
