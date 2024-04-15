@@ -8,7 +8,7 @@ body {
 main {
     width: 100vw;
     height: 100vh;
-    background-color: #f0f;
+    background-color: #f0f0f0;
     display: grid;
     place-items: center;
 }
@@ -20,4 +20,19 @@ section {
     background-image: url('images/loader.gif');
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    box-shadow: 0 0 100px 10px #545;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+section img.hide {
+    visibility: hidden;
+}
+
+section:hover {
+    cursor: pointer;
+}
+
+section:active {
+    transform: scale(0.95);
 }
