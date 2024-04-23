@@ -1,43 +1,25 @@
+const hero = document.querySelector('#hero');
+const foto = document.getElementById('foto');
 
-const hero = document.querySelector('main section');
-const foto = document.querySelector('main section img');
-let areWeLoadingTheImage = false;
+let areWeLoadingAPhotograph = false;
 
-hero.addEventListener('click', function() {
-  if (areWeLoadingTheImage === false) {
-    areWeLoadingTheImage = true;
+hero.addEventListener('click', () => {
+    hero.classList.add('loading');
 
+    if (areWeLoadingAPhotograph === false) {
+        areWeLoadingAPhotograph = true;
+        foto.classList.add('hide');
 
-    foto.classList.add('hide');
+        const nomoro = Math.random() * 1000000;
 
-    let random = Math.round(Math.random() * 100000);
+        const fotoURL = `https://picsum.photos/seed/${nomoro}/1000/600`;
 
-    let url = `https://picsum.photos/seed/${random}/1000/600`;
+        foto.onload = () => {
+            areWeLoadingAPhotograph = false;
+            foto.classList.remove('hide');
+            hero.classList.remove('loading');
+        };
 
-    const img = new Image();
-
-    const done= (allGood = true) => {
-      areWeLoadingTheImage = false;
-      foto.classList.remove('hide');
-
-      if (allGood === false) {
-        console.log('failed to load the image');
-      }
+        foto.src = fotoURL;
     }
-
-    img.onload = () => {
-      foto.src = url;
-      done();
-    }
-
-    img.onerror = (error) => {
-      console.error('failed to load the image', error);
-      done(false);
-    }
-
-    img.src = url;
-  } else {
-    // flash a red colour
-    alert('the fotograf is still being loaded.')
-  }
 });
