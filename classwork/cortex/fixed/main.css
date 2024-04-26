@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -37,21 +38,37 @@ header p span {
     left: 0;
 }
 
+header div nav {
+    display: flex;
+    flex-direction: column;
+}
+
+header div ul {
+    list-style: none;
+    margin: 1rem 0;
+    font-size: 0.7rem;
+    padding: 0.8rem 0;
+    border-top: 1px solid pink;
+    border-bottom: 1px solid pink;
+    color: #777;
+}
+
 header p span.b {
     background-color: pink;
     position: relative;
+    border-radius: 100%;
 }
 /* ----- som */
 
 header p {
     .a {
         left: 100px;
-        animation: a-line 1s ease-in-out infinite;
+        animation: a-line 3s ease-in-out infinite;
         z-index: 50;
     }
     .b {
-        top: 100px;
-        animation: b-line 1s ease-in-out infinite;
+        top: 50px;
+        animation: b-line 3s ease-in-out infinite;
         z-index: 100;
     }
 }
@@ -59,26 +76,26 @@ header p {
 @keyframes a-line {
     0% {
         top: 0px;
-        left: 100px;
+        left: 0px;
         z-index: 50;
     }
 
     50% {
         top: 100px;
-        left: 0;
+        left: 100px;
         transform: scale(0.8);
     }
 
     100% {
         top: 0px;
-        left: 100px;
+        left: 0px;
         z-index: 200;
     }
 }
 
 @keyframes b-line {
     0% {
-        top: 100px;
+        top: 50px;
         left: 0;
     }
 
@@ -86,13 +103,13 @@ header p {
     }
 
     50% {
-        top: 0px;
+        top: 50px;
         left: 100px;
         transform: scale(0.8);
     }
 
     100% {
-        top: 100px;
+        top: 50px;
         left: 0;
     }
 }
@@ -102,6 +119,8 @@ header p {
 section#fotografs {
     max-width: calc(80% - 320px);
     margin: 0 auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
 }
 
 section#fotografs dl dt {
@@ -126,7 +145,6 @@ section#fotografs dl dd {
     margin: 0;
     padding: 1rem;
     margin-bottom: 0.5rem;
-    min-height: 280px;
 }
 
 section#fotografs dl dd img {
