@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    background-color: #f0f0f0;
+    color: #444;
+}
+
+main {
+    background-color: #ffa;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main div {
+    width: 60%;
+    aspect-ratio: 1/0.5;
+    border: 1rem solid black;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+main div img {
+    display: none;
+}
+
+main div img {
+    display: block;
+    transition: 0.2s ease-in-out;
+    transform: scale(1);
+    width: 100%;
+}
+
+main div:hover img {
+    transform: scale(1.4);
+}
+/*
+
+main div:has(img:hover) {
+    transform: scale(4.2);
+    cursor: pointer;
+}
+*/
