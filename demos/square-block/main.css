@@ -1,0 +1,112 @@
+body {
+    background-color: #ff4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: #f00;
+    width: 60vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main div {
+    background-color: #fff;
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    background-color: bisque;
+    position: relative;
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        gap: 1rem;
+    }
+    div.one {
+        display: none;
+    }
+
+    div.two {
+        background-color: green;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+
+        a {
+            display: block;
+            font-size: 1.5rem;
+            width: 32px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        background-color: yellow;
+    }
+
+    /* this is using flex for reponsive
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    main div {
+        flex-grow: 1;
+    }
+    */
+
+    header {
+        align-items: flex-start;
+
+        nav {
+            background-color: blue;
+            width: auto;
+            display: block;
+        }
+        div.one {
+            display: block;
+        }
+
+        div.two {
+            display: none;
+        }
+    }
+
+    header:has(nav:hover) {
+        div.two {
+            display: block;
+        }
+    }
+
+    /* using grid for responsive, we hope */
+    main {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+        height: 90vh;
+    }
+    header nav a#hb {
+        display: block;
+    }
+}
