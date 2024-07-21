@@ -1,0 +1,47 @@
+body {
+    background-color: #f0f0f0;
+    color: #777;
+    margin: 0;
+    font-size: 2rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+div.two {
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+div.three {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+img {
+    display: block;
+}
+
+div.three img {
+    width: 100px;
+}
+
+div.three a img {
+    width: 100px;
+    transition: all 0.5s;
+    filter: saturate(0);
+}
+a img:hover {
+    outline: 1rem solid #000;
+    transform: scale(2) rotate(10deg);
+    filter: saturate(1);
+}
