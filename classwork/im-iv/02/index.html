@@ -3,49 +3,60 @@
     <head>
         <meta charset="UTF-8" />
         <title>3M Fotografi</title>
+        <link rel="stylesheet" href="main.css" />
         <style>
+            body {
+                margin: 0;
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent overlay */
+                background-image: url('fotografs/thumbnails/01.jpg');
+
+                background-size: cover;
+                backdrop-filter: blur(40px); /* Adjust blur radius as needed */
+            }
             main {
                 display: grid;
-                grid-template-columns: 1024px 320px;
-                width: 1400px;
+                grid-template-columns: 1024px 80px;
+                gap: 10px;
+                align-items: start;
+                width: calc(1024px + 10px + 160px + 10px);
                 margin: 0 auto;
-                gap: 10px;
             }
-            main ul {
-                display: grid;
-                grid-template-columns: 160px 160px;
-                gap: 10px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-            main ul li {
-                margin: 0;
-                padding: 0;
-            }
-            main ul li img {
+
+            main img {
+                display: block;
                 width: 100%;
+            }
+
+            main ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 80px);
+                gap: 10px;
             }
         </style>
     </head>
     <body>
         <main>
-            <img src="fotografs/01.jpg" alt="pink wall" />
-            <ul>
+            <img src="fotografs/01.jpg" alt="pink chair" width="100%" />
+            <ul class="thumbnails">
                 <li>
                     <a href="index.html">
-                        <img src="fotografs/01-thumb.jpg" alt="thumbpink wall" />
+                        <img src="fotografs/thumbnails/01.jpg" alt="01" />
                     </a>
                 </li>
-
                 <li>
                     <a href="two.html">
-                        <img src="fotografs/01-thumb.jpg" alt="thumbpink wall" />
+                        <img src="fotografs/thumbnails/02.jpg" alt="02" />
                     </a>
                 </li>
                 <li>
                     <a href="three.html">
-                        <img src="fotografs/01-thumb.jpg" alt="thumbpink wall" />
+                        <img src="fotografs/thumbnails/03.jpg" alt="03" />
                     </a>
                 </li>
             </ul>
