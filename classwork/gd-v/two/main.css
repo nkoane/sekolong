@@ -1,0 +1,30 @@
+body {
+    background-color: rgba(16, 203, 220, 0.5); /* Optional: Semi-transparent overlay */
+    margin: 0;
+    background-image: url('./fotos/thumbs/01.jpg');
+    background-size: cover;
+    backdrop-filter: blur(30px);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1024px 240px;
+    gap: 10px;
+    width: calc(1024px + 10px + 240px);
+    margin: 0 auto;
+}
+
+main img:first-child {
+    box-shadow: 0 0 100px rgb(102, 102, 102);
+}
+
+img {
+    width: 100%;
+}
+
+nav img {
+    width: 80px;
+}
