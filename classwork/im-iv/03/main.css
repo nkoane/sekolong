@@ -1,0 +1,43 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+main {
+    width: calc(1000px + 2rem);
+    margin: 6rem auto 0 auto;
+}
+
+main div {
+    height: 600px;
+    overflow-y: hidden;
+    border: 1rem solid #fff; /* similar to: #ffffff */
+    margin-bottom: 3rem;
+    border-top-left-radius: 1rem;
+}
+
+main div img {
+    display: block;
+    border-top-left-radius: 1rem;
+}
+
+main nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+main nav a img {
+    filter: saturate(0);
+    transition: all 0.5s;
+}
+
+main nav a img:hover {
+    filter: saturate(1);
+    outline: 10px solid #fff;
+}
+
+main nav a.selected img {
+    filter: saturate(1);
+    outline: 10px solid #fff;
+}
