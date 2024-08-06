@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    /* cursor: none; */
+}
+
+div {
+    background-color: rgb(74, 198, 223);
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    position: absolute;
+    animation: pulse 2s infinite;
+    transition: all 1s;
+}
+
+div.square {
+    border-radius: 0;
+    background-color: rgb(174, 198, 223);
+    width: 8rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
