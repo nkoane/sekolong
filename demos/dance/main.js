@@ -1,10 +1,10 @@
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
     init();
 });
 
 const init = () => {
-    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN_HERE';
-    var map = new mapboxgl.Map({
+    mapboxgl.accessToken = '';
+    const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v11',
     });
@@ -152,7 +152,7 @@ const init = () => {
 
         const directions = document.createElement('ol');
 
-        data.legs[0].steps.forEach((step) => {
+        data.legs[0].steps.forEach((step, _idx) => {
             const li = document.createElement('li');
             li.innerHTML = `
                 <strong>${step.maneuver.instruction}</strong>
@@ -166,7 +166,7 @@ const init = () => {
         instructions.appendChild(directions);
 
         const bounds = new mapboxgl.LngLatBounds(geojson.geometry.coordinates[0], geojson.geometry.coordinates[0]);
-        geojson.geometry.coordinates.forEach((coord) => {
+        geojson.geometry.coordinates.forEach((coord, _idx) => {
             bounds.extend(coord);
         });
 
