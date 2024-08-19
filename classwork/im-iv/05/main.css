@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(255, 183, 183);
+    display: grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+h1 {
+    background-image: url('https://picsum.photos/seed/jonas-gwangwa/600/300');
+    width: 600px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: 1rem solid white;
+}
+
+h1 span {
+    transition: opacity 1s;
+    opacity: 0.2;
+}
+
+h1:hover span {
+    opacity: 1;
+}

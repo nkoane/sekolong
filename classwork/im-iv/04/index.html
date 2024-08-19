@@ -1,45 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="main.css" />
-        <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet" />
-        <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
-        <title>Rabbit Hole</title>
-    </head>
-    <body>
-        <main>
-            <header>
-                <h1>RH+</h1>
-                <p>[the coordinates should be here]</p>
-            </header>
-            <section id="map">map</section>
-            <footer>ETSPx &copy; 2024</footer>
-        </main>
-        <script>
-            mapboxgl.accessToken = '[add mapbox access token here]';
-            const map = new mapboxgl.Map({
-                container: 'map', // container ID
-                // citry of johannesburg coordinates
-                center: [28.047305, -26.204103], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-                zoom: 16, // starting zoom
-            });
 
-            const jozi = new mapboxgl.Marker({
-                color: '#FFff44',
-                draggable: true,
-            })
-                .setLngLat([28.047305, -26.204103])
-                .addTo(map);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <title>Rabbit Hole</title>
+</head>
 
-            navigator.geolocation.getCurrentPosition((position) => {
-                const { latitude, longitude } = position.coords;
-                jozi.setLngLat([longitude, latitude]);
-                map.jumpTo({
-                    center: [longitude, latitude],
-                });
+<body>
+  <main>
+    <header>
+      <h1>RH+</h1>
+      <p>[the coordinates should be here]</p>
+    </header>
+    <section id="map">map</section>
+    <footer>ETSPx &copy; 2024</footer>
+  </main>
+  <script>
+    mapboxgl.accessToken = '[access token]';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      // citry of johannesburg coordinates
+      center: [28.047305, -26.204103], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+      zoom: 16, // starting zoom
+    });
+
+    const jozi = new mapboxgl.Marker({
+      color: '#00ff00',
+      draggable: true,
+    })
+      .setLngLat([28.047305, -26.204103])
+      .addTo(map);
+
+    // -25.017850133425306, 28.781024437006206
+    const xai = new mapboxgl.Marker({
+      color: '#ff0000',
+      draggable: true,
+    })
+      // "+-26.177350334580552, 28.00843827015918"
+      .setLngLat([28.781024437006206, -26.177350334580552])
+      .addTo(map);
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const {latitude, longitude} = position.coords;
+      jozi.setLngLat([longitude, latitude]);
+      map.jumpTo({
+        center: [longitude, latitude],
+      });
+
+      map.fitBounds([jozi.getLngLat(), xai.getLngLat()], {
+        padding: 100,
+      });
+
+      const from = jozi.getLngLat().lng + ',' + jozi.getLngLat().lat;
+      const to = xai.getLngLat().lng + ',' + xai.getLngLat().lat;
+
+      const mode = 'driving';
+
+      let dir_url = `https://api.mapbox.com/directions/v5/mapbox/${mode}/${from};${to}?geometries=geojson&steps=true`;
+
+      dir_url = dir_url + '&access_token=[access_token]';
+
+      const directions = fetch(dir_url)
+        .then((response) => response.json())
+        .then((json) => {
+          const data = json.routes[0];
+          const route = data.geometry.coordinates;
+
+          const geojson = {
+            type: 'Feature',
+            properties: {},
+            geometry: {
+              type: 'LineString',
+              coordinates: route,
+            },
+          };
+
+          console.log(geojson);
+          // if the route already exists on the map, we'll reset it using setData
+          if (map.getSource('route')) {
+            map.getSource('route').setData(geojson);
+          }
+          // otherwise, we'll make a new request
+          else {
+            console.log('adding route');
+            map.addLayer({
+              id: 'route',
+              type: 'line',
+              source: {
+                type: 'geojson',
+                data: geojson,
+              },
+              layout: {
+                'line-join': 'round',
+                'line-cap': 'round',
+              },
+              paint: {
+                'line-color': '#0000ff',
+                'line-width': 5,
+                'line-opacity': 0.75,
+              },
             });
-        </script>
-    </body>
+          }
+        });
+    });
+  </script>
+</body>
+
 </html>
