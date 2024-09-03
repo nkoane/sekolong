@@ -13,5 +13,3 @@ to achieve, a very narrow intent, then we will refine that intent once a baselin
 HTML and CSS are not programming languages, but computer programming, is about achieving and intent, if HTML and CSS can realise that intent, we are done. In fact, Java (the OG) would require an extensive amount of time, resources and effort just to make a hyperlink.
 
 Now, rembember this always: intent, what is it that you want done.
-
-

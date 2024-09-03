@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <title>Balling</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    document.querySelector('body').classList.add('hide');
+                }, 3000);
+            });
+
+            // generate an array of afro centric colours
+            const colours = [
+                '#FFD700',
+                '#FFA07A',
+                '#FF4500',
+                '#FF6347',
+                '#FF69B4',
+                '#FF7F50',
+                '#FF8C00',
+                '#FFA500',
+                '#FFB6C1',
+                '#FFC0CB',
+                '#FFDAB9',
+                '#FFDEAD',
+                '#FFE4B5',
+                '#FFE4C4',
+                '#FFE4E1',
+                '#FFEBCD',
+                '#FFEFD5',
+                '#FFFAF0',
+                '#FFFAFA',
+                '#FFFF00',
+                '#FFFFE0',
+                '#FFFFF0',
+                '#FFFFFF',
+                '#F0F8FF',
+                '#FAEBD7',
+                '#FAF0E6',
+                '#FAFAD2',
+                '#FDF5E6',
+                '#FFFAF0',
+                '#F5F5DC',
+                '#F5F5F5',
+                '#F5FFFA',
+                '#F8F8FF',
+                '#F0FFF0',
+                '#FFFAFA',
+                '#F0FFFF',
+                '#F0F8FF',
+                '#F0E68C',
+                '#F0F8FF',
+                '#F0FFF0',
+                '#F0FFFF',
+                '#F4A460',
+                '#F5DEB3',
+                '#F5F5DC',
+                '#F5F5F5',
+                '#F5FFFA',
+                '#F8F8FF',
+                '#FA8072',
+                '#FAEBD7',
+                '#FAF0E6',
+                '#FAFAD2',
+                '#FDF5E6',
+                '#FF0000',
+                '#FF00FF',
+                '#FF1493',
+                '#FF4500',
+                '#FF6347',
+                '#FF69B4',
+                '#FF7F50',
+                '#FF8C00',
+                '#FFA07A',
+                '#FFA500',
+                '#FFB6C1',
+                '#FFC0CB',
+                '#FFD700',
+                '#FFDAB9',
+                '#FFDEAD',
+                '#FFD700',
+                '#FFDAB9',
+                '#FFDEAD',
+                '#FFD700',
+                '#FFDAB9',
+            ];
+            setInterval(() => {
+                const randomColor = colours[Math.floor(Math.random() * colours.length)];
+                document.body.style.backgroundColor = randomColor;
+            }, 3000);
+        </script>
+    </body>
+</html>
