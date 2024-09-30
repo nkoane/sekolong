@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: white;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column-reverse;
+
+    a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    a img {
+        width: 1rem;
+        display: block;
+    }
+    div.social {
+        align-self: flex-end;
+        display: flex;
+        gap: 0.4rem;
+    }
+}
+
+main section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 66% 30%;
+    gap: 4%;
+    article {
+        h2 {
+            margin: 1rem 0;
+            width: 65%;
+        }
+        p {
+            line-height: 2rem;
+            max-width: 60ch;
+        }
+    }
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-template-rows: 120px;
+        grid-auto-rows: 120px;
+    }
+    aside div {
+        border-bottom: 0.4rem solid white;
+        padding: 1rem 0;
+        place-items: center;
+        display: grid;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-size: cover;
+        filter: saturate(0);
+        background-position: center;
+        &:hover {
+            filter: saturate(1);
+        }
+
+        &:first-child {
+            background-image: url('https://picsum.photos/seed/sixfour/600/600');
+        }
+
+        &:nth-child(2) {
+            background-image: url('https://picsum.photos/seed/seven/600/600');
+        }
+
+        &:nth-child(3) {
+            background-image: url('https://picsum.photos/seed/ten/600/600');
+        }
+    }
+
+    aside div:last-child {
+        border-bottom: none;
+    }
+}
+
+main footer {
+    background-color: white;
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
