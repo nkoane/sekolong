@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(176, 176, 157);
+    font-size: 1.2rem;
+    color: #000;
+}
+main {
+    padding: 3rem;
+}

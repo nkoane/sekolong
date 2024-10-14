@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+table {
+    border-collapse: collapse;
+}
+
+table tr td,
+table tr th {
+    border: 1px solid black;
+    padding: 0.5rem;
+}

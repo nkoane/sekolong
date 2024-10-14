@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <title>formation</title>
+    </head>
+    <body>
+        <main>
+            <form action="greet.html" method="post">
+                <p>
+                    <label for="FirstName">What is your first name?</label>
+                    <input type="text" required name="first-name" id="FirstName" />
+                </p>
+                <p>
+                    <label for="EmailAddress">What is your email address</label>
+                    <input type="email" required name="email-address" id="EmailAddress" />
+                </p>
+                <p>
+                    <label for="Age"> How old are you? </label>
+                    <input type="number" name="age" id="Age" min="0" />
+                </p>
+                <p>
+                    <label for="Password">What is your password?</label>
+                    <input type="password" required name="password" id="Password" />
+                </p>
+                <fieldset>
+                    <legend>What is your prefered diet?</legend>
+                    <p>
+                        <label for="Beef"> <input value="beef" type="radio" name="diet" id="Beef" checked /> Beef </label>
+                        <label for="Chicken"> <input value="shikken" type="radio" name="diet" id="Chicken" /> Chicken </label>
+                        <label for="Thlogo"> <input value="thlogo" type="radio" name="diet" id="Thlogo" /> Thlogo </label>
+                        <label for="Mogodu"> <input value="mogodu" type="radio" name="diet" id="Mogodu" /> Mogodu </label>
+                    </p>
+                    <p>
+                        <label for="Beverage">Choose your prefered drank(s)</label>
+                        <select name="beverage" id="Beverage">
+                            <option value="black-label">Carling Black Label</option>
+                            <option value="tequila-blaco">El Jimardo</option>
+                        </select>
+                    </p>
+                    <p>
+                        <textarea name="diet-additions" id="DietAdditions" placeholder="What allergies do you have? If Any?" cols="160" rows="19"></textarea>
+                    </p>
+                </fieldset>
+                <p>
+                    <label> <input type="checkbox" name="marry-me" /> Will you marry me? </label>
+                </p>
+                <p>
+                    <button type="submit">Say Hello</button>
+                </p>
+            </form>
+        </main>
+    </body>
+</html>
