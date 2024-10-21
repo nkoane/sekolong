@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .thumbnail {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photography Gallery</h1>
+    <div class="gallery">
+        <img src="https://picsum.photos/150/150?random=1" alt="Image 1" class="thumbnail">
+        <img src="https://picsum.photos/150/150?random=2" alt="Image 2" class="thumbnail">
+        <img src="https://picsum.photos/150/150?random=3" alt="Image 3" class="thumbnail">
+        <img src="https://picsum.photos/150/150?random=4" alt="Image 4" class="thumbnail">
+        <img src="https://picsum.photos/150/150?random=5" alt="Image 5" class="thumbnail">
+        <img src="https://picsum.photos/150/150?random=6" alt="Image 6" class="thumbnail">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.getElementsByClassName("close")[0];
+        const thumbnails = document.getElementsByClassName("thumbnail");
+
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src.replace("150/150", "700/500");
+            }
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
