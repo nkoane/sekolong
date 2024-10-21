@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    font-size: 1.4rem;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section div {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+section div#one {
+    background-image: url('https://picsum.photos/seed/s/2000/1000');
+}
+
+section div#two {
+    background-image: url('https://picsum.photos/seed/l/2000/1000');
+}
+
+section div#three {
+    background-image: url('https://picsum.photos/seed/xl/2000/1000');
+}
+
+aside {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    a:hover {
+        background-color: white;
+    }
+}
