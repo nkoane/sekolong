@@ -19,6 +19,7 @@ section div {
     font-size: 8rem;
     font-weight: bold;
     color: #fff;
+    transition: all 0.5s;
 }
 
 section div#one {
