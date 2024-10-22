@@ -1,30 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('section');
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector("section");
 
-    document.getElementById('next').onclick = () => {
-        const item = document.querySelector('section div:first-child');
-        slider.append(item);
-    };
-    document.getElementById('previous').onclick = () => {
-        const item = document.querySelector('section div:last-child');
-        slider.prepend(item);
-    };
+  function nextItem(slider) {
+    const item = document.querySelector("section div:first-child");
+    slider.append(item);
+  }
 
-    document.addEventListener('keyup', (e) => {
-        if (e.key === 'ArrowRight') {
-            const item = document.querySelector('section div:first-child');
-            slider.append(item);
-        }
+  function previousItem(slider) {
+    const item = document.querySelector("section div:last-child");
+    slider.prepend(item);
+  }
 
-        if (e.key === 'ArrowLeft') {
-            const item = document.querySelector('section div:last-child');
-            slider.prepend(item);
-        }
-    });
+  document.getElementById("next").onclick = () => {
+    nextItem(slider);
+  };
+  document.getElementById("previous").onclick = () => {
+    previousItem(slider);
+  };
 
-    // automagically
-    setInterval(() => {
-        const item = document.querySelector('section div:first-child');
-        slider.append(item);
-    }, 2000);
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "ArrowRight") {
+      nextItem(slider);
+    }
+
+    if (e.key === "ArrowLeft") {
+      previousItem(slider);
+    }
+  });
 });
