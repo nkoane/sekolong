@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>G23</title>
+        <style>
+            body {
+                margin: 0;
+                font-size: 1.2rem;
+                font-family: Helvetica, sans-serif;
+                background-color: white;
+                color: black;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                header {
+                    background-color: #8ff;
+                }
+                section {
+                    background-color: #f8f;
+                    flex-grow: 1;
+                    display: grid;
+                    flex: 1;
+                    align-items: center;
+                }
+                footer {
+                    background-color: #ff8;
+                }
+            }
+
+            .box {
+                width: 50px;
+                background-color: red;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="root">
+            <header>
+                <h1>G23</h1>
+            </header>
+            <section>
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+            </section>
+            <footer>
+                <p>eat the sour pap &copy; 2024</p>
+            </footer>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script defer>
+            // use a script tag or an external JS file
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // gsap code here!
+                //rotate and move elements with a class of "box" ("x" is a shortcut for a translateX() transform) over the course of 1 second.
+                gsap.to('.box', { rotation: 277, x: 600, duration: 2 });
+                //animate ".box" from an opacity of 0 to an opacity of 0.5
+                // gsap.fromTo('.box', { opacity: 0.1 }, { opacity: 1, duration: 2, delay: 0 });
+            });
+        </script>
+    </body>
+</html>
