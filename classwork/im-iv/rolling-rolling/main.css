@@ -1,0 +1,23 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-background-color: #f88;
+}
+
+main {
+    section {
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 4rem;
+        background-color: hsl(from var(--primary-background-color) var(--scroll-degree) s l / var(--scroll-percentage));
+    }
+}
