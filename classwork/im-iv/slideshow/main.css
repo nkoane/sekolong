@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    width: 120px;
+    overflow: hidden;
+}
+
+main section {
+    background-color: yellow;
+    width: calc(120px);
+    display: flex;
+    /* overflow: hidden; */
+}
+main section div {
+    flex-shrink: 0;
+    background-color: #88f;
+    width: 120px;
+    aspect-ratio: 1/1;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.5s;
+    display: inline-block;
+}
