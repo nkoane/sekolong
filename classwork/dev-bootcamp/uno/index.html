@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>To be in love.</title>
+        <style>
+            body {
+                background-color: white;
+                color: black;
+                transition: all 1s;
+            }
+
+            .dark {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JOURNAL</h1>
+        <p>This is <a href="https://instagram.com/ltdn">how</a> we, yeah?</p>
+        <button>darkness</button>
+        <script>
+            document.querySelector('button').addEventListener('click', () => {
+                document.querySelector('body').classList.toggle('dark');
+            });
+        </script>
+    </body>
+</html>
