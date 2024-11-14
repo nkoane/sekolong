@@ -18,6 +18,7 @@ section ol {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px;
     gap: 10px;
 }
 section ol li a img {
