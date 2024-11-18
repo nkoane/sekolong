@@ -2,14 +2,23 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
 main {
     width: 1070px;
     margin: 120px auto 0 auto;
+}
+
+main header,
+main footer {
+    font-family: Helvetica, Arial, sans-serif;
 }
 section {
     display: grid;
     grid-template-columns: 800px 250px;
     gap: 20px;
+
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 section ol {
@@ -23,4 +32,15 @@ section ol {
 }
 section ol li a img {
     display: block;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+
+section ol li a:hover img {
+    opacity: 1;
+    outline: 0.32rem solid #19c398;
+}
+
+section ol li.selected a img {
+    opacity: 1;
 }
