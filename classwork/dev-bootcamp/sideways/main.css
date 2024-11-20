@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    color: #444;
+}
+
+ol {
+    background-color: red;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 100vw); /* repeat(3, 1fr) */
+    list-style: none;
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    li {
+        background-color: #f88;
+        scroll-snap-align: start;
+        font-size: 8rem;
+        color: white;
+        font-weight: bold;
+        display: grid;
+        place-items: center;
+    }
+
+    li:nth-child(2) {
+        background-color: #88f;
+    }
+
+    li:last-child {
+        background-color: #8f8;
+    }
+}
