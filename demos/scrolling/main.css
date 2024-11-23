@@ -16,7 +16,7 @@ main header {
     z-index: 1000;
     transform-origin: left;
     animation: scroll-indicator linear;
-    animation-timeline: scroll();
+    animation-timeline: scroll(y);
     position: fixed;
     top: 0;
 }
