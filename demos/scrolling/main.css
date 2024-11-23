@@ -30,19 +30,43 @@ main section {
     margin-top: 1rem;
 }
 main section div {
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 2rem);
     height: 100vw;
-    display: grid;
-    place-items: center;
     font-weight: bold;
-    padding: 2rem;
+    padding: 1rem;
+}
+
+main section div img {
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    height: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+    main section div img {
+        scale: 0.95;
+        opacity: 0.2;
+        animation: fade-in linear forwards;
+        /* animation-timeline: view(66% 33%); */
+        animation-timeline: view();
+        animation-range: contain 100px;
+        /* animation-range-start: contain;
+        animation-range-end: contain; */
+    }
+
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+            scale: 1;
+        }
+    }
 }
 main section div:first-child {
     background-color: #f8f;
 }
-main section div:nth-child(2) {
+main section div:nth-child(2n) {
     background-color: #ff8;
 }
-main section div:last-child {
+main section div:nth-child(2n + 1) {
     background-color: #8f8;
 }
