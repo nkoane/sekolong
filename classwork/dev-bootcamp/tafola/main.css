@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+}
+table {
+    width: 80%;
+}
+
+.blue-colour {
+    background-color: rgb(116, 151, 179);
+}
+
+table tr td,
+table tr th {
+    border: 1px solid black;
+}
