@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+}
+main {
+    position: relative;
+}
+main header {
+    background-color: #8ff;
+    height: 1rem;
+    width: 100%;
+    scale: 0.1 1;
+    z-index: 1000;
+    transform-origin: left;
+    animation: scroll-indicator linear;
+    animation-timeline: scroll();
+    position: fixed;
+    top: 0;
+}
+
+@keyframes scroll-indicator {
+    to {
+        scale: 1 1;
+    }
+}
+main section {
+    margin-top: 1rem;
+}
+main section div {
+    width: calc(100vw - 4rem);
+    height: 100vw;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    padding: 2rem;
+}
+main section div:first-child {
+    background-color: #f8f;
+}
+main section div:nth-child(2) {
+    background-color: #ff8;
+}
+main section div:last-child {
+    background-color: #8f8;
+}
