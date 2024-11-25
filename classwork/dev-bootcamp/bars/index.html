@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <title>BARZ</title>
+</head>
+
+<body>
+  <main id="app">
+    <div id="map">map</div>
+    <div id="info">
+      <div id="position">position</div>
+      <div id="details">details</div>
+    </div>
+  </main>
+  <script>
+    mapboxgl.accessToken = 'MAPBOX_ACCESS_TOKEN';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v12', // style URL
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 3, // starting zoom
+    });
+
+    // -26.18964676672448, 28.013312991465877
+    function success(location) {
+      console.log(location.coords.longitude, location.coords.latitude);
+
+      const coords = location.coords;
+      const marker = new mapboxgl.Marker({color: 'green', draggable: true}).setLngLat([coords.longitude, coords.latitude]).addTo(map);
+      map.flyTo({
+        center: marker.getLngLat(),
+        zoom: 13,
+      });
+
+      const xaixai = new mapboxgl.Marker({color: 'purple'}).setLngLat([28.008287982098867, -26.17730819920811]).addTo(map);
+      const joanna = new mapboxgl.Marker({color: 'purple'}).setLngLat([28.008554552201442, -26.176698516514712]).addTo(map);
+    }
+
+    function error() {
+      alert('Wena wa bora, why o sa batle gore ke tsebe gore o kae?');
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
+  </script>
+</body>
+
+</html>

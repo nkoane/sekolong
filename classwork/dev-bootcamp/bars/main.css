@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  height: 100vh;
+  gap: 1rem;
+}
+
+div#map {
+  background-color: #f8f;
+}
+div#info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+div#position {
+  background-color: #8ff;
+  padding: 1rem;
+}
+
+div#details {
+  background-color: #ff8;
+  padding: 1rem;
+}
