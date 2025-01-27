@@ -1,0 +1,39 @@
+body {
+  background-color: #e0e0e0;
+  font-family: Helvetica, Ariial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main .square {
+  height: 20rem;
+  background-color: rgb(255, 255, 190);
+  aspect-ratio: 2/1;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+}
+main form .input-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+main form input[type='color']#colourSelector {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+main form input[type='checkbox']#toggleModeSelector {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: 0;
+}
