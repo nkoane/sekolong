@@ -2,7 +2,24 @@ body {
   background-color: #e0e0e0;
   font-family: Helvetica, Ariial, sans-serif;
   margin: 0;
+  transition: 0.3s;
   padding: 0;
+}
+body.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+body .sun {
+  display: none;
+}
+
+body.dark .sun {
+  display: block;
+}
+
+body.dark .moon {
+  display: none;
 }
 
 main {
@@ -13,7 +30,7 @@ main {
 
 main .square {
   height: 20rem;
-  background-color: rgb(255, 255, 190);
+  /* background-color: rgb(255, 255, 190); */
   aspect-ratio: 2/1;
   display: grid;
   place-items: center;

@@ -13,4 +13,10 @@ const toggleModeSelector = document.querySelector('main form input[type="checkbo
 
 toggleModeSelector.addEventListener('change', function () {
   console.log(toggleModeSelector.checked);
+
+  if (toggleModeSelector.checked === true) {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
 });
