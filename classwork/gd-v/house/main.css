@@ -1,0 +1,60 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+main {
+  width: calc(3 * 420px);
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-bottom: 1rem black solid;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+section a:first-child {
+  background-color: #8ff;
+  aspect-ratio: 1/1.15;
+  background-image: url('https://picsum.photos/seed/nne/630/1000');
+  background-size: cover;
+}
+
+section div {
+  background-color: #f88;
+  background-image: url('https://picsum.photos/seed/thlano/630/1000');
+  background-size: cover;
+}
+
+footer {
+  background-color: #88f;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer h3 {
+  aspect-ratio: 1/1;
+  background-size: cover;
+  margin: 0;
+}
+
+footer h3:nth-child(1) {
+  background-image: url('https://picsum.photos/seed/supa/420/420');
+}
+footer h3:nth-child(2) {
+  background-image: url('https://picsum.photos/seed/thataro/420/420');
+}
+
+footer h3:nth-child(3) {
+  background-image: url('https://picsum.photos/seed/robedi/420/420');
+}
