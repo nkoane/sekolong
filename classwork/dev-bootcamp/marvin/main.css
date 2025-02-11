@@ -8,19 +8,23 @@ body {
   place-items: center;
   height: 100vh;
 }
+
 main {
   width: 805px;
   display: grid;
   grid-template-columns: 132px 348px 252px;
   gap: 36px;
 }
+
 #logo {
   border-right: 1px dotted #ccc;
   padding-top: 224px;
 }
+
 #photo a:hover img {
   outline: 1rem solid #000;
 }
+
 #photo a img {
   width: 100%;
   transition: outline 0.5s;
@@ -43,11 +47,13 @@ main {
   h1 {
     font-weight: lighter;
   }
+
   .quote {
     color: #010101;
     font-size: 1.15rem;
     line-height: 1.8rem;
   }
+
   .author {
     color: #999999;
     margin: 0;
@@ -83,9 +89,11 @@ main {
     display: grid;
     justify-content: center;
   }
+
   #story #top {
     margin-top: 0;
   }
+
   #story {
     padding: 2rem;
 
