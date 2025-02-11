@@ -1,0 +1,38 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #666;
+}
+
+main {
+  height: 100vh;
+  place-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+main ol {
+  flex-grow: 1;
+  background-color: antiquewhite;
+  height: 320px;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+main ol li {
+  background-color: #ff8;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  place-items: center;
+  display: grid;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}

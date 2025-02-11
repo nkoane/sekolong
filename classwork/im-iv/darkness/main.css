@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  background-color: #ddd;
+}
+
+body.darkmode {
+  color: white;
+  background-color: #333;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body.darkmode main {
+  color: red;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+body.darkmode button {
+  background-color: #0056b3;
+}
+
+body.darkmode button:hover {
+  background-color: #003f7f;
+}
