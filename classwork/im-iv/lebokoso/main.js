@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log("They hatin'");
   });
 
-  /* read up collision detection; or is it boundry detection */
+  /* read up collision detection; or is it boundary detection */
 
   /* saving the content of two */
   const two = document.querySelector('div#two');
