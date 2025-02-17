@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  div {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #ff8;
+    font-size: 2rem;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  div#one {
+    background-color: #8ff;
+  }
+
+  div#two {
+    background-color: #f8f;
+  }
+}
