@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine Contents</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #fff;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .header {
+        grid-column: span 2;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      .header p {
+        font-size: 20px;
+        margin: 0;
+      }
+      .image-left img,
+      .image-right img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .content {
+        grid-column: span 2;
+        display: flex;
+        gap: 20px;
+      }
+      .column {
+        flex: 1;
+      }
+      h2 {
+        border-bottom: 2px solid black;
+        padding-bottom: 5px;
+        font-size: 24px;
+      }
+      .item {
+        margin-bottom: 10px;
+      }
+      .item strong {
+        display: block;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>CONTENTS</h1>
+        <p>OCTOBER 2013</p>
+      </div>
+      <div class="image-left">
+        <img src="https://picsum.photos/seed/jonas-1/630/1000" alt="Food Image" />
+      </div>
+      <div class="image-right">
+        <img src="https://picsum.photos/seed/jonas-1/630/1000" alt="Boats Image" />
+      </div>
+      <div class="content">
+        <div class="column">
+          <h2>Leisure</h2>
+          <div class="item"><strong>Hot Spot</strong>The sea vistas at Cape View Clifton</div>
+          <div class="item"><strong>Spotlight</strong>What’s new on the foodie front</div>
+          <div class="item"><strong>Taste Shaper</strong>Kevin Joseph on French cuisine</div>
+          <div class="item"><strong>Thirst Quencher</strong>The latest updates on the drinks scene</div>
+          <div class="item"><strong>Drink Up</strong>Local wines to savour</div>
+        </div>
+        <div class="column">
+          <h2>Solutions</h2>
+          <div class="item"><strong>Five Outdoor Spaces</strong>From urban courtyards to rural retreats</div>
+          <div class="item"><strong>What’s Now</strong>Exclusive deals for the season</div>
+        </div>
+        <div class="column">
+          <h2>Regulars & Wins</h2>
+          <div class="item"><strong>Editor’s Letter</strong>Naomi Larkin on the 20th Birthday issue</div>
+          <div class="item"><strong>Contributors</strong>Meet the creative minds</div>
+          <div class="item"><strong>Report Back</strong>A tour of HL’s luxury locations</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
