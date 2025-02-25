@@ -6,6 +6,7 @@ body {
   background-color: yellow;
   background-image: url('images/bg-four.png');
   margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 main {
@@ -38,4 +39,18 @@ footer {
     background-image: url('images/bg-two.png');
     background-color: yellow;
   }
+}
+footer div:first-child {
+  display: grid;
+  place-items: center;
+}
+footer div:first-child span {
+  display: block;
+  background-color: red;
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: 1rem solid white;
+  display: grid;
+  place-items: center;
 }
