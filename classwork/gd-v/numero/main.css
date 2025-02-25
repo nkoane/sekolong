@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  height: 30%;
+  background-image: url('images/oranges.jpg');
+  background-size: cover;
+  background-position: 0% 50%;
+}
+
+header section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header section p {
+  max-width: 60%;
+  margin: 0;
+}
+
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
