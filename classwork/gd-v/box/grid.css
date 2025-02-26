@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 10% 60% 20%;
+  gap: 5%;
+  height: 100vh;
+}
+main div {
+  background-color: beige;
+  padding: 2rem;
+}
+
+main div.five {
+  background-color: rgb(200, 187, 250);
+  grid-column: 2/4;
+}
+main div.four {
+  background-color: rgb(255, 154, 230);
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+main div.three {
+  background-color: transparent;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+main div.three a {
+  display: block;
+  transition: 0.3s;
+  opacity: 0.4;
+}
+main div.three a:hover {
+  opacity: 1;
+}
