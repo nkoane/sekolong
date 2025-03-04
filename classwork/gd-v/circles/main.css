@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+section {
+  display: grid;
+  grid-template-columns: 100px 200px 200px 200px;
+  grid-template-rows: 100px 200px 200px 200px;
+  height: 200px;
+  gap: 1rem;
+}
+
+section.two {
+  grid-template-columns: 200px 200px 200px 100px;
+  grid-template-rows: 200px 200px 200px 100px;
+}
+
+section div {
+  background-color: #8ff;
+  border-radius: 100%;
+  height: 200px;
+  background-image: url('https://picsum.photos/200');
+  display: grid;
+  place-items: center;
+}
+
+section.one div:first-child,
+section.two div:last-child {
+  background: transparent;
+}
