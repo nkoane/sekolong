@@ -1,0 +1,27 @@
+function draw() {
+  const canvas = document.getElementById('canvas');
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'rgb(200 200 0)';
+    ctx.fillRect(0, 0, 50, 50);
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgb(0 0 200)';
+    ctx.moveTo(0, 0);
+
+    document.addEventListener('click', (ev) => {
+      console.log(ev.clientX, ev.clientY);
+      line(ctx, ev.clientX, ev.clientY);
+    });
+  }
+}
+
+function line(ctx, x, y) {
+  ctx.lineTo(x, y);
+  ctx.stroke();
+}
+draw();
