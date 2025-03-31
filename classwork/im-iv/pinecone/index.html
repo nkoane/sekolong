@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pain</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-pink-100">
+    <main
+      class="group hover:bg-white bg-black text-white transition-all duration-500w-full h-screen flex flex-col gap-16 items-center justify-center max-w-6xl sm:flex-row">
+      <div
+        x-data="{ open: false }"
+        class="group-hover:bg-black hover:bg-white bg-white w-1/8 aspect-square shadow hover:shadow-2xl transition-all duration-700 hover:skew-3">
+        <button @click="open = ! open">Expand</button>
+
+        <div x-show="open" x-data="{ index: 1, counter: 2 }">
+          <h1 x-text="index * counter">1</h1>
+          <button x-on:click="index++">make the circle bigger</button>
+        </div>
+      </div>
+      <div x-data="{ open: false }" class="bg-white w-1/8 aspect-square shadow hover:shadow-2xl transition-all duration-700 hover:skew-3 active:-skew-12">
+        <button x-on:click="open = ! open">Toggle Dropdown</button>
+
+        <div x-show="open" x-transition>Dropdown Contents...</div>
+      </div>
+      <div x-data="{ placeholder: 'Type here...' }" class="bg-white w-1/5 aspect-square shadow-lg">
+        <h1 x-text="placeholder"></h1>
+        <input type="text" x-model:placeholder="placeholder" />
+      </div>
+    </main>
+  </body>
+</html>

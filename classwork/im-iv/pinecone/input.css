@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+main {
+  display: grid;
+  height: 100dvh;
+  place-items: center;
+
+  div {
+    width: 25%;
+    background-color: blue;
+    aspect-ratio: 1 / 1;
+  }
+}
