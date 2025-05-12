@@ -1,0 +1,31 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+main {
+  min-width: 50vw;
+  max-width: 70vw;
+  background-color: #fff;
+  padding: 1rem;
+  margin: 4rem auto 0 auto;
+}
+main p#video-loading {
+  padding: 0.5rem;
+  svg {
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+  }
+  50% {
+    transform: rotate(260deg);
+    fill: #ff0000;
+  }
+}
