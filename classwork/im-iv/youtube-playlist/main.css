@@ -29,3 +29,36 @@ main p#video-loading {
     fill: #ff0000;
   }
 }
+
+div#player {
+  background-color: #f0f0f0;
+  min-height: 315px;
+  margin-bottom: 1rem;
+  iframe {
+    aspect-ratio: 560/315;
+  }
+}
+ol#video-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      img {
+        filter: grayscale(100%);
+        transition: all 1s ease;
+      }
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}

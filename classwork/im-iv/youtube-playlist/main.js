@@ -15,14 +15,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     const results = fetch(playlist_url).then((response) => {
       response.json().then((data) => {
         const videoList = document.querySelector('ol#video-list');
+        const playerLayer = document.querySelector('#player');
         document.querySelector('#video-loading').remove();
-        console.log(videoList);
+        // console.log(videoList);
         data.items.forEach((item) => {
+          const image = document.createElement('img');
+          image.src = item.snippet.thumbnails.default.url;
+          // anchor
+          const anchor = document.createElement('a');
+          anchor.href = `#${item.contentDetails.videoId}`;
+          anchor.addEventListener('click', () => {
+            playerLayer.innerHTML = `<iframe width="100%" src="https://www.youtube.com/embed/${item.contentDetails.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+          });
+          // add image into anchor
+          anchor.appendChild(image);
+          // create list item
           const listItem = document.createElement('li');
-          listItem.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${item.contentDetails.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+          // add anchor (with image) into list item
+          listItem.appendChild(anchor);
+          // add list item into video list
           videoList.appendChild(listItem);
-          console.log(item.snippet.title, item);
+          // console.log(item.snippet.title, item.snippet.thumbnails.default);
         });
+        playerLayer.innerHTML = `<iframe width="100%" src="https://www.youtube.com/embed/${data.items[0].contentDetails.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       });
     });
   } catch (error) {
