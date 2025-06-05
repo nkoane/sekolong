@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 1.6s ease;
+}
+body.dark {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
