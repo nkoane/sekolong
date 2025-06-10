@@ -1,5 +1,7 @@
-// alert('Hello, Barbra!');
+document.querySelector('button.lightness').onclick = function () {
+  document.querySelector('body').classList.remove('dark');
+};
 
-document.querySelector('body').onclick = function () {
-  document.querySelector('body').classList.toggle('dark');
+document.querySelector('button.darkness').onclick = function () {
+  document.querySelector('body').classList.add('dark');
 };

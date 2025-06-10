@@ -14,3 +14,33 @@ main {
   display: grid;
   place-items: center;
 }
+
+main ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+main ol li button {
+  appearance: none;
+  background: none;
+  border: none;
+  transition: opacity 0.8s ease-in-out;
+}
+
+main ol li button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+main ol li button.lightness {
+  display: none;
+}
+
+body.dark main ol li button.lightness {
+  display: block;
+}
+
+body.dark main ol li button.darkness {
+  display: none;
+}
