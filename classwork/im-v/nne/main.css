@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+
+  main#root ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  main#root ol li {
+    width: 100vw;
+    height: 100vh;
+  }
+  main#root ol li img {
+    width: 100%;
+    display: block;
+  }
+}
