@@ -1,0 +1,26 @@
+body {
+  background-color: #fff;
+  margin: 0;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main div {
+  background-color: #f8f;
+  width: 105px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+main div#ball {
+  background-color: #ff0000;
+  width: 105px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  /* transition: all 0.7s ease-in-out; */
+}
