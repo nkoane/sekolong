@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  /* padding: 2rem; */
+}
+
+table {
+  border: 1px solid red;
+  width: calc(100% - 4rem);
+  margin: 2rem;
+  border-collapse: collapse;
+}
+
+table tr td,
+table tr th {
+  border: 1px solid black;
+}
+table tr th {
+  text-transform: uppercase;
+}
+
+table tr td.light-blue-bg,
+table tr:first-child td {
+  background-color: rgb(221, 229, 239);
+}
+
+table tr:first-child td:first-child {
+  background-color: transparent;
+}
+
+table tr:nth-child(4) td:nth-child(n + 3) {
+  background-color: rgb(221, 229, 239);
+}
