@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/**
+ * todo get this live
+ * ! hell no
+ * * learn how do use these todo's
+*/
+.row {
+  padding: 1rem;
+  background-color: hsl(0, 0, 80%);
+}
