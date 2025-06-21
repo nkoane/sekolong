@@ -1,0 +1,22 @@
+{
+  "titles": "me data",
+  "provinces": [
+    {
+      "name": "gauteng",
+      "code": "gp"
+    },
+    {
+      "name": "free state",
+      "code": "fs"
+    },
+
+    {
+      "name": "eastern cape",
+      "code": "ec"
+    },
+    {
+      "name": "Swaziland",
+      "code": "sw"
+    }
+  ]
+}
