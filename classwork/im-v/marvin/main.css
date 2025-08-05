@@ -1,0 +1,27 @@
+body {
+  background-color: #fff;
+  color: black;
+  margin: 0;
+  font-size: 1rem;
+}
+main {
+  display: grid;
+  grid-template-columns: 130px 420px 255px;
+  width: 805px;
+  margin: 90px auto 0 auto;
+}
+
+main div#logo {
+  margin-top: 225px;
+}
+main div#foto {
+}
+
+main div#foto img {
+  width: 340px;
+  margin: 0 auto;
+  display: block;
+  filter: saturate(0);
+}
+main div#story {
+}

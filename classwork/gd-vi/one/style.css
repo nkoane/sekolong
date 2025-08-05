@@ -1,0 +1,46 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 600px 320px;
+    width: 920px;
+    column-gap: 3rem;
+    margin: 160px auto 0 auto;
+}
+
+main div#foto {
+}
+
+main div#foto img {
+    width: 100%;
+    display: block;
+}
+
+main div#foto a {
+    transition: all 0.5s ease-in-out;
+    display: block;
+}
+main div#foto a:hover {
+    outline: 1rem solid #000;
+}
+/*
+
+
+
+
+
+
+
+
+
+
+*/
+main div#copy p {
+    line-height: 2rem;
+    font-size: 1.4rem;
+}

@@ -1,0 +1,78 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #ff8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+section {
+  background-color: #f8f;
+  flex-grow: 1;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  div {
+    background-color: #88f;
+    background-size: cover;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+  }
+  div#block-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url('https://picsum.photos/seed/namune/1000/1000');
+  }
+
+  div#block-2 {
+    background-image: url('https://picsum.photos/seed/panana/1000/1000');
+  }
+  div#block-3 {
+    background-image: url('https://picsum.photos/seed/tsuru/1000/1000');
+  }
+}
+
+footer {
+  background-color: #8ff;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    li a img {
+      filter: saturate(0);
+      transition: filter 0.3s ease-in-out;
+    }
+    li a:hover img {
+      filter: saturate(1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+}
