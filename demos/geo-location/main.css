@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+#map {
+  width: 100vw;
+  height: 90vh;
+}
