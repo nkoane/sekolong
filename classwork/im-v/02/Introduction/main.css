@@ -1,3 +1,14 @@
 body {
-    background-color: #ff8;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div#ball {
+    background-color: #f8f;
+    width: 50vw;
+    height: 50vh;
 }
