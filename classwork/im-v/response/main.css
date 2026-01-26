@@ -1,0 +1,48 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100vh;
+}
+main div {
+  background-color: blue;
+}
+main div#one dl {
+  display: none;
+  dd {
+    display: none;
+  }
+  &:hover dd {
+    display: block;
+  }
+}
+main div:first-child {
+  background-color: red;
+}
+
+main div:last-child {
+  background-color: green;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 300px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  main div#one {
+    background-color: yellow;
+    dl {
+      display: block;
+    }
+    ul {
+      display: none;
+    }
+  }
+  main div:last-child {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 100vh;
+}
+
+main div#top {
+  background-image: url('https://picsum.photos/seed/banana/1000/800');
+  background-size: cover;
+}
+main div#bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+div#bottom div#left {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 1rem;
+}
+
+div#bottom-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+div#bottom-bottom {
+  background-image: url('https://picsum.photos/seed/guava/1000/800');
+  background-size: cover;
+}
+
+main div#bottom div#right {
+  background-color: white;
+}
