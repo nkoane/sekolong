@@ -9,6 +9,35 @@ body {
 
 div#ball {
     background-color: #f8f;
-    width: 50vw;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
+    animation: pulse 2s infinite alternate;
+}
+
+div#ball.loaded {
+    animation: reduce 1s forwards;
+}
+/* pulse but using color not scale */
+@keyframes pulse {
+    0% {
+        background-color: #f8f;
+    }
+    50% {
+        background-color: #d0d;
+    }
+    100% {
+        background-color: #f8f;
+    }
+}
+
+@keyframes reduce {
+    from {
+        width: 100vw;
+        height: 100vh;
+    }
+    to {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
 }
