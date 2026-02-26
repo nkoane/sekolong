@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+div.box {
+    position: relative;
+    background-color: #f8f;
+    width: 15ch;
+    padding: 1.2rem 0;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    transition: all 1s ease;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+
+    div.box {
+        background-color: white;
+        color: black;
+    }
+}
