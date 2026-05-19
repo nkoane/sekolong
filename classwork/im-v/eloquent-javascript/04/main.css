@@ -1,0 +1,45 @@
+:root {
+    --bg-color: #f8f;
+    --text-color: #8f8;
+}
+body.dark {
+    --bg-color: #88f;
+    --text-color: #f88;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+}
+
+button#toggle {
+    padding: 2rem 2rem;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url('./images/moon-stars.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 100%;
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+body.dark {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark button#toggle {
+    background-image: url('./images/sun.svg');
+    background-color: var(--bg-color);
+    border-color: var(--text-color);
+}
