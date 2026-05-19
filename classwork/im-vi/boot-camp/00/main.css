@@ -1,0 +1,28 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    place-content: center;
+    display: grid;
+}
+
+main {
+    width: 400px;
+    border: 0.4rem white solid;
+    border-radius: 0.8rem;
+    background-color: white;
+    height: 400px;
+
+    img {
+        width: 400px;
+        display: block;
+        border-radius: 0.8rem;
+        transition: opacity 0.4s;
+    }
+    img:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
