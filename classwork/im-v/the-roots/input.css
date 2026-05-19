@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+ol > li {
+    @apply p-4 mb-4 flex gap-2 items-center;
+    span:first-child {
+        @apply grow;
+    }
+    input {
+        @apply w-16 h-16;
+    }
+    a {
+        @apply text-xl text-red-400 hover:bg-red-400 hover:text-white;
+    }
+}
+ol > li:nth-child(even) {
+    @apply bg-gray-200;
+}
+
+ol > li:last-child {
+    @apply mb-0;
+}
