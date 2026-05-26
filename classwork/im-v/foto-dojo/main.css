@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #000;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 80vw;
+    height: 60vh;
+    border-radius: 1rem;
+    animation: pulse 2.5s ease infinite;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    outline: 1rem solid #fff;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #000;
+    }
+}
+
+h1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    color: pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: filter 0.86s;
+    text-transform: uppercase;
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 1.7s;
+    }
+}
+h1:has(a:hover) {
+    filter: saturate(0);
+}
+h1 a:hover {
+    color: #000000;
+}
