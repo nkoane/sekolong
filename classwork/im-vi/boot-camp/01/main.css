@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    cursor: none;
+}
+div#ball {
+    background-color: red;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+div#ball.clicked {
+    background-color: yellow;
+    transform: scale(0.5);
+}
+main {
+    max-width: 400px;
+    margin: 4rem auto;
+    h1 {
+        margin: 0 0 1.5rem 0;
+        font-size: 2.5rem;
+        text-transform: lowercase;
+        color: #777;
+    }
+    p {
+        margin: 0.5rem 0;
+        line-height: 1.6rem;
+        font-size: 0.8rem;
+        color: #555;
+    }
+    > img {
+        width: 100%;
+        display: block;
+        margin-bottom: 1.5rem;
+        transition: outline 2.3s ease;
+        outline: 1rem solid #fff;
+        &:hover {
+            outline: 1rem solid #000;
+        }
+    }
+}
+main ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    li {
+        width: 1rem;
+        aspect-ratio: 1 / 1;
+        a img {
+            width: 100%;
+            opacity: 0.5;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        a:hover img {
+            opacity: 1;
+        }
+    }
+}
