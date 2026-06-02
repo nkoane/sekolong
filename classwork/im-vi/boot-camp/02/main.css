@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background-color: #d0d0d0;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    width: calc(200% / 3);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: 0.5fr 3fr; */
+    grid-auto-flow: row;
+    margin: 3rem auto 0 auto;
+    gap: 1rem;
+}
+
+main div#logo {
+    display: grid;
+    place-items: center;
+}
+
+main div#logo span {
+    width: 50%;
+    background-color: #f8f;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
+
+main div h1 {
+    margin: 0;
+}
+
+main div#gallery ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    /* the above is similar to this: grid-template-columns: 1fr 1fr; */
+}
+
+main div#gallery ul li img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    display: block;
+}
+
+main div#gallery ul li img:hover {
+    filter: grayscale(0%);
+}
+
+main ul#thumbnails {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    /* the above is similar to this: grid-template-columns: 1fr 1fr; */
+}
+
+/* biome-ignore lint/style/noDescendingSpecificity: this is how we do it */
+main ul#thumbnails li img {
+    width: 100%;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+main ul#thumbnails li.selected img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
