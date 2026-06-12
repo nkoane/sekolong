@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ms Jackson</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <main>
+            <h1>The Weather App</h1>
+            <form id="getTheCityForm">
+                <input type="text" name="city" value="Johannesburg" />
+                <button type="submit">get</button>
+            </form>
+
+            <dl id="panel">
+                <dt class="temperature">temperature</dt>
+                <dd class="time">hour</dd>
+                <dd class="city">city</dd>
+                <dd class="rain">raining?</dd>
+            </dl>
+            <ol id="hourly">
+                <li>hour | temperature | rain</li>
+            </ol>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
