@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    width: 100vw;
+    overflow: hidden;
+}
+main ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 100vw);
+    width: max-content;
+    position: relative;
+    left: 0;
+    transition: transform 0.5s ease;
+}
+
+main ol li {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 10rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+main ol li:hover {
+    cursor: pointer;
+}
+
+/* stable per-slide colors - survive DOM reorder */
+main ol li:nth-child(1) {
+    background-color: #ff8;
+}
+main ol li:nth-child(2) {
+    background-color: #8f8;
+}
+main ol li:nth-child(3) {
+    background-color: #88f;
+}
+main ol li.slide-1 {
+    background-color: #ff8;
+}
+main ol li.slide-2 {
+    background-color: #8f8;
+}
+main ol li.slide-3 {
+    background-color: #88f;
+}
