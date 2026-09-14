@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap");
+
+:root {
+    --red: #c41e1a;
+    --gold: #e8a317;
+    --gold-deep: #c27b0e;
+    --green: #1b5e20;
+    --green-mid: #2e7d32;
+    --earth: #2d1b0e;
+    --earth-light: #5d4037;
+    --terracotta: #b85c38;
+    --sand: #fff8e7;
+    --cream: #fdf6e3;
+    --paper: #fffcf2;
+    --line: #e8dcc6;
+    --ink: #1a1207;
+    --muted: #8d7b68;
+    --radius-lg: 24px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100dvh;
+    font-family:
+        "Plus Jakarta Sans",
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        sans-serif;
+    color: var(--ink);
+    background-color: var(--cream);
+    display: grid;
+    place-items: start center;
+    padding: 32px 16px 48px;
+    position: relative;
+}
+
+/* Pan-African top stripe - kente edge */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 8px;
+    background: linear-gradient(
+        90deg,
+        var(--red) 0 14%,
+        var(--gold) 14% 28%,
+        var(--green) 28% 42%,
+        #121212 42% 56%,
+        var(--red) 56% 70%,
+        var(--gold) 70% 84%,
+        var(--green) 84% 100%
+    );
+    z-index: 10;
+}
+
+/* no background pattern - solid colour only */
+body::after {
+    display: none;
+}
+
+/* main card */
+main {
+    width: 100%;
+    max-width: 560px;
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px 26px 10px;
+    box-shadow:
+        0 1px 0 rgba(45, 27, 14, 0.06),
+        0 12px 32px rgba(45, 27, 14, 0.12),
+        0 32px 64px rgba(45, 27, 14, 0.08);
+    position: relative;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+/* kente-inspired geometric footer strip inside card */
+main::after {
+    content: "";
+    display: block;
+    height: 18px;
+    margin: 28px -26px -10px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0 18px,
+        var(--gold) 18px 36px,
+        var(--green) 36px 54px,
+        #1a1207 54px 66px,
+        var(--terracotta) 66px 84px,
+        var(--gold-deep) 84px 102px
+    );
+    position: relative;
+}
+
+/* tiny diamonds overlay on kente strip - South African greetings */
+main::before {
+    content: "◆  DUMELANG  ◆  AVUXENI  ◆";
+    display: block;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--earth-light);
+    opacity: 0.95;
+    background-color: var(--sand);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 14px;
+    margin: 2px auto 22px;
+    width: fit-content;
+    max-width: 100%;
+    box-shadow: 0 2px 8px rgba(45, 27, 14, 0.06);
+}
+
+/* form layout */
+form {
+    display: block;
+}
+
+form label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: var(--sand);
+    border: 1.5px solid var(--line);
+    border-radius: 0;
+    padding: 6px 6px 6px 18px;
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        background 160ms ease;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+form label:focus-within {
+    background: #ffffff;
+    border-color: var(--gold);
+    box-shadow:
+        0 0 0 4px rgba(232, 163, 23, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+form label:has(input::placeholder-shown) {
+    /* keep affordance */
+}
+
+#todo {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--earth);
+    min-width: 0;
+    padding: 8px 0;
+}
+
+#todo::placeholder {
+    color: #b0a090;
+    font-weight: 500;
+}
+
+form button {
+    flex-shrink: 0;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--green);
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    padding: 12px 20px;
+    border-radius: 0;
+    box-shadow:
+        0 2px 10px rgba(27, 94, 32, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transition:
+        transform 120ms ease,
+        box-shadow 120ms ease,
+        filter 120ms ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+form button:hover {
+    filter: brightness(1.06);
+    box-shadow:
+        0 4px 16px rgba(27, 94, 32, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+form button:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+form button::before {
+    content: "✦";
+    font-size: 0.9em;
+    opacity: 0.95;
+}
+
+/* todo list */
+#todo-list {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    counter-reset: todo;
+    min-height: 42px;
+}
+
+/* empty state when only placeholder exists or empty - isXhosa / Sesotho */
+#todo-list:empty::before {
+    content: "Awukho umsebenzi okwangoku — yongeza umsonto wakho wokuqala. / Ha ho na mosebetsi ha jwale — kenya mohala wa hao wa pele.";
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 28px 16px;
+    border: 1.5px dashed var(--line);
+    border-radius: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+    background-color: var(--sand);
+}
+
+/* todo item - no rounded corners, square kente edge */
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 1.5px solid var(--line);
+    border-radius: 0;
+    padding: 14px 14px 14px 16px;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--earth);
+    line-height: 1.35;
+    position: relative;
+    box-shadow:
+        0 1px 0 rgba(45, 27, 14, 0.04),
+        0 4px 12px rgba(45, 27, 14, 0.04);
+    transition:
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        transform 150ms ease,
+        background 150ms ease;
+    overflow: hidden;
+}
+
+/* left accent - kente-inspired - square to match item */
+.todo-item::before {
+    content: "";
+    width: 4px;
+    align-self: stretch;
+    border-radius: 0;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+/* cycle accent colors like kente threads */
+.todo-item:nth-child(3n + 1)::before {
+    background: var(--gold);
+}
+.todo-item:nth-child(3n + 2)::before {
+    background: var(--terracotta);
+}
+.todo-item:nth-child(3n + 3)::before {
+    background: var(--green-mid);
+}
+
+.todo-item:hover {
+    border-color: #ddd0b8;
+    box-shadow: 0 6px 18px rgba(45, 27, 14, 0.08);
+    transform: translateY(-1px);
+    background: #fffefa;
+}
+
+/* custom marker - number in Adinkra-inspired circle */
+.todo-item {
+    counter-increment: todo;
+}
+
+.todo-item::after {
+    /* decorative right side - subtle chevron pattern */
+    content: counter(todo, decimal-leading-zero);
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    background: var(--sand);
+    border: 1px solid var(--line);
+    padding: 5px 8px;
+    border-radius: 999px;
+    min-width: 32px;
+    text-align: center;
+}
+
+/* strikethrough / completed state if JS adds .completed */
+.todo-item.completed {
+    opacity: 0.62;
+    background: #fff8e7;
+}
+
+.todo-item.completed::before {
+    background: var(--muted) !important;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    text-decoration-color: rgba(45, 27, 14, 0.3);
+    text-decoration-thickness: 1.5px;
+}
+
+/* focus visible */
+#todo:focus-visible,
+form button:focus-visible,
+.todo-item:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* responsive */
+@media (max-width: 520px) {
+    body {
+        padding: 24px 12px 36px;
+    }
+    main {
+        padding: 22px 16px 10px;
+        border-radius: 20px;
+    }
+    main::before {
+        font-size: 0.62rem;
+        letter-spacing: 0.16em;
+        padding: 7px 10px;
+    }
+    form::before {
+        font-size: 1.75rem;
+    }
+    form label {
+        padding-left: 14px;
+    }
+    form button {
+        padding: 11px 16px;
+    }
+    .todo-item {
+        padding: 12px 12px 12px 14px;
+    }
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* dark mode - warm dark earth, not pure black */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #211a12;
+        --sand: #2a2218;
+        --cream: #140f0a;
+        --line: #3a2e22;
+        --ink: #f5e6c8;
+        --earth: #f5e6c8;
+        --muted: #b8a48a;
+    }
+    body {
+        background-color: #120e08;
+    }
+    main {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+        border-color: #3a2e22;
+    }
+    main::before {
+        background: #2a2218;
+        color: #e8dcc6;
+        border-color: #3a2e22;
+    }
+    form label {
+        background: #1e1810;
+    }
+    form label:focus-within {
+        background: #251e14;
+    }
+    .todo-item {
+        background: #1e1810;
+    }
+    .todo-item:hover {
+        background: #252018;
+    }
+    .todo-item::after {
+        background: #2a2218;
+        color: #b8a48a;
+    }
+    #todo {
+        color: #f5e6c8;
+    }
+    #todo::placeholder {
+        color: #8d7b68;
+    }
+}
