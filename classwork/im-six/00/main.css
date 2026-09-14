@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #000;
+}
+
+div.container {
+  background-color: white;
+  height: 50vh;
+  width: 50svh;
+}
+
+div.box {
+  /*
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+*/
+  border-left: 1rem solid blue;
+  border-top: 1rem solid yellow;
+  height: 100px;
+  aspect-ratio: 3/1;
+  background-color: red;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* transform: rotate(45deg); */
+  top: 100px;
+  left: 200px;
+  transition: all 0.2s linear;
+}
