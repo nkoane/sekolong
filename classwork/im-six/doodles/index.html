@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="icon" type="image/svg" href="bowl-food.svg" />
+        <title>Doodles</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <main>
+            <header><h1>Doodle</h1></header>
+            <section>
+                <form method="get" id="todo-form">
+                    <p>
+                        <label><input type="text" name="task" id="todo" placeholder="what do you wanna do?" /></label>
+                        <button type="submit">
+                            <img src="icons/plus.svg" alt="" />
+                        </button>
+                    </p>
+                </form>
+                <ol id="todos">
+                    <li>
+                        <a href="#todo-done-1" class="action">
+                            <img src="icons/circle.svg" alt="done" class="undone" />
+                            <img src="icons/check-circle.svg" alt="done" class="done hide" />
+                        </a>
+                        <span class="todo">the todo</span>
+                        <a href="#todo-delete-1" class="delete">
+                            <img src="icons/minus.svg" alt="delete" />
+                        </a>
+                    </li>
+                </ol>
+            </section>
+            <footer></footer>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>

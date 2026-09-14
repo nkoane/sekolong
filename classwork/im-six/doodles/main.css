@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+main {
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 6rem;
+    header {
+        text-align: center;
+    }
+
+    form {
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed #aaa;
+    }
+    form p {
+        display: grid;
+        grid-template-columns: 1fr 3rem;
+        gap: 1rem;
+        margin: 0;
+    }
+    form p label {
+        display: flex;
+
+        input {
+            flex: 1;
+            font-size: 1.25rem;
+            padding: 0.5rem;
+        }
+    }
+
+    form p button {
+        background: none;
+        border: none;
+    }
+    form p button:hover {
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+section ol {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        margin: 0.4rem 0;
+        padding: 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2rem 1fr 2rem;
+        gap: 1rem;
+        transition: opacity 0.8s ease-out;
+        a img {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .action {
+        }
+        .todo {
+        }
+        .delete {
+        }
+    }
+    li.fade {
+        opacity: 0;
+    }
+}
